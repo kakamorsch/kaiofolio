@@ -24,3 +24,9 @@ logs
 
 # Vercel
 .vercel
+# AI context files
+AGENTS.md
+CONTEXT.md
+
+# Test results
+test-results/
