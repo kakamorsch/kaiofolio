@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --cyber-bg: #0a0a0f;
+    --cyber-fg: #e0e0e0;
+    --cyber-card: #12121a;
+    --cyber-muted: #1c1c2e;
+    --cyber-border: #2a2a3a;
+    --cyber-accent: #00ff88;
+    --cyber-accent-secondary: #ff00ff;
+    --cyber-accent-tertiary: #00d4ff;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cyber-bg text-cyber-fg font-mono;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(0, 255, 136, 0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .cyber-chamfer {
+    clip-path: polygon(
+      0 12px, 12px 0,
+      calc(100% - 12px) 0, 100% 12px,
+      100% calc(100% - 12px), calc(100% - 12px) 100%,
+      12px 100%, 0 calc(100% - 12px)
+    );
+  }
+
+  .cyber-chamfer-sm {
+    clip-path: polygon(
+      0 8px, 8px 0,
+      calc(100% - 8px) 0, 100% 8px,
+      100% calc(100% - 8px), calc(100% - 8px) 100%,
+      8px 100%, 0 calc(100% - 8px)
+    );
+  }
+
+  .cyber-chamfer-lg {
+    clip-path: polygon(
+      0 20px, 20px 0,
+      calc(100% - 20px) 0, 100% 20px,
+      100% calc(100% - 20px), calc(100% - 20px) 100%,
+      20px 100%, 0 calc(100% - 20px)
+    );
+  }
+
+  .cyber-border {
+    @apply border border-cyber-border;
+  }
+
+  .cyber-border-accent {
+    @apply border border-cyber-accent;
+  }
+
+  .cyber-glow {
+    box-shadow: 0 0 5px var(--cyber-accent), 0 0 10px rgba(0, 255, 136, 0.25);
+  }
+
+  .cyber-glow-secondary {
+    box-shadow: 0 0 5px var(--cyber-accent-secondary), 0 0 20px rgba(255, 0, 255, 0.38);
+  }
+
+  .cyber-glow-tertiary {
+    box-shadow: 0 0 5px var(--cyber-accent-tertiary), 0 0 20px rgba(0, 212, 255, 0.38);
+  }
+
+  .cyber-text-glow {
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  }
+
+  .cyber-text-glow-secondary {
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  }
+
+  .cyber-glitch {
+    position: relative;
+  }
+
+  .cyber-glitch::before,
+  .cyber-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+
+  .cyber-glitch::before {
+    color: #ff00ff;
+    z-index: -1;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  }
+
+  .cyber-glitch::after {
+    color: #00d4ff;
+    z-index: -2;
+    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  }
+
+  .scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.15) 2px,
+      rgba(0, 0, 0, 0.15) 4px
+    );
+  }
+
+  .circuit-bg {
+    background-image:
+      linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .terminal-cursor::after {
+    content: '█';
+    @apply text-cyber-accent animate-blink ml-1;
+  }
+
+  .holographic {
+    @apply bg-cyber-muted/30 border border-cyber-accent/30 backdrop-blur-sm;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.1);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00ff88 0%, #00d4ff 50%, #ff00ff 100%);
+  }
+
+  .text-gradient-accent {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+  }
+}
