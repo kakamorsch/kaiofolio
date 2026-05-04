@@ -58,7 +58,7 @@ function resolveArrayStrings(t: (key: string) => string, baseKey: string, rawArr
 
 function rawMessage(tm: (key: string) => unknown, key: string): string {
   const val = tm(key)
-  if (typeof val === 'string') return val
+  if (typeof val === 'string') return val.replace(/\[at\]/g, '@')
   if (val && typeof val === 'object') {
     const staticVal = (val as any).body?.static
     if (typeof staticVal === 'string') return staticVal.replace(/\[at\]/g, '@')
