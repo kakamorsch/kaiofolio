@@ -99,7 +99,7 @@ export default {
     location: 'Urubici, SC, Brazil',
     contact: {
       phone: '+55 21 99536-4470',
-      email: `kakamorsch${'@'}gmail.com`,
+      email: 'kakamorsch[at]gmail.com',
       linkedin: 'linkedin.com/in/kakamorsch',
       portfolio: 'kakamorsch.github.io',
     },
@@ -128,7 +128,7 @@ export default {
         ],
         technologies: ['Vue.js', 'Figma', 'REST APIs', 'Accessibility'],
         level: 9,
-        hackCommand: `ssh root${'@'}dot-digital-group --decode-mission`,
+        hackCommand: 'ssh root[at]dot-digital-group --decode-mission',
         hackOutput: [
           '> Connecting to DOT Digital Group servers...',
           '> Bypassing corporate firewall...',

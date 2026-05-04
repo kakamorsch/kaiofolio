@@ -30,3 +30,4 @@ CONTEXT.md
 
 # Test results
 test-results/
+.env*.local

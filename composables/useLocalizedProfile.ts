@@ -56,6 +56,16 @@ function resolveArrayStrings(t: (key: string) => string, baseKey: string, rawArr
   return Array.from({ length: rawArray.length }, (_, i) => t(`${baseKey}.${i}`))
 }
 
+function rawMessage(tm: (key: string) => unknown, key: string): string {
+  const val = tm(key)
+  if (typeof val === 'string') return val
+  if (val && typeof val === 'object') {
+    const staticVal = (val as any).body?.static
+    if (typeof staticVal === 'string') return staticVal.replace(/\[at\]/g, '@')
+  }
+  return ''
+}
+
 export function useLocalizedProfile() {
   const { t, tm, locale } = useI18n()
 
@@ -67,7 +77,7 @@ export function useLocalizedProfile() {
   const localizedSpecialties = computed(() => resolveArrayStrings(t, 'profile.specialties', tm('profile.specialties') as any[]))
   const localizedContact = computed<LocalizedContact>(() => ({
     phone: t('profile.contact.phone'),
-    email: t('profile.contact.email'),
+    email: rawMessage(tm, 'profile.contact.email'),
     linkedin: t('profile.contact.linkedin'),
     portfolio: t('profile.contact.portfolio'),
   }))
@@ -89,7 +99,7 @@ export function useLocalizedProfile() {
       highlights: resolveArrayStrings(t, `profile.experiences.${i}.highlights`, raw[i]?.highlights),
       technologies: resolveArrayStrings(t, `profile.experiences.${i}.technologies`, raw[i]?.technologies),
       level: Number(tm(`profile.experiences.${i}.level`)) || 0,
-      hackCommand: t(`profile.experiences.${i}.hackCommand`),
+      hackCommand: rawMessage(tm, `profile.experiences.${i}.hackCommand`),
       hackOutput: resolveArrayStrings(t, `profile.experiences.${i}.hackOutput`, raw[i]?.hackOutput),
     }))
   })
