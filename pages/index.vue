@@ -1,19 +1,19 @@
 <template>
-  <main>
+  <div>
     <HeroSection />
     <ExperienceSection />
     <SkillsSection />
     <HobbiesSection />
     <NextMissionSection />
     <FooterSection />
-  </main>
+  </div>
 </template>
 
-<script setup>
-useHead({
+<script setup lang="ts">
+const { t } = useI18n()
+
+useSeoMeta({
   title: 'KAIO MORSCH // SENIOR SOFTWARE ENGINEER',
-  meta: [
-    { name: 'description', content: 'Senior Software Engineer | Distributed Systems & Financial Tech | Go, Bun, Vue/Nuxt | Scalable E-commerce Solutions' }
-  ]
+  description: t('footer.brandDescription'),
 })
 </script>

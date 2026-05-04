@@ -1,16 +1,30 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  i18n: {
+    strategy: 'no_prefix',
+    defaultLocale: 'pt',
+    locales: [
+      { code: 'pt', name: 'Português', file: 'pt.ts' },
+      { code: 'en', name: 'English', file: 'en.ts' },
+    ],
+    langDir: 'locales/',
+    restructureDir: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_locale',
+      redirectOn: 'root',
+    },
+  },
   nitro: {
     preset: 'vercel'
   },
   app: {
     head: {
-      title: 'KAIO MORSCH // SENIOR SOFTWARE ENGINEER',
+      titleTemplate: '%s',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Senior Software Engineer | Distributed Systems & Financial Tech | Go, Bun, Vue/Nuxt' }
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
