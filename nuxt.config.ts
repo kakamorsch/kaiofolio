@@ -25,6 +25,9 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'author', content: 'Kaio Morsch' },
+        { name: 'theme-color', content: '#00f0ff' },
+        { property: 'og:site_name', content: 'Kaio Morsch Portfolio' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

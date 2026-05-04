@@ -62,6 +62,7 @@
 						<li>
 							<a
 								:href="`mailto:${localizedContact.email}`"
+								:aria-label="`${$t('footer.contact')} — Email`"
 								class="flex items-center gap-2 text-cyber-mutedFg hover:text-cyber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-cyber-accent focus:ring-offset-2 focus:ring-offset-cyber-bg"
 							>
 								<span class="text-cyber-accent" aria-hidden="true">></span>
