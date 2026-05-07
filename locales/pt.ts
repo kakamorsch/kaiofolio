@@ -116,19 +116,18 @@ export default {
       {
         id: 'dot-digital',
         company: 'DOT Digital Group',
-        role: 'Senior Frontend Developer',
+        role: 'Senior Software Engineer',
         period: 'Junho 2025 - Presente',
         location: 'Brasil',
         description:
-          'Atuo como engenheiro frontend sênior na Dot Digital Group — líder global em educação corporativa para Fortune 500 — traduzindo designs complexos em aplicações Vue.js escaláveis e acessíveis que impactam milhares de alunos.',
+          'Atuo como engenheiro de software sênior na Dot Digital Group — líder global em educação corporativa para Fortune 500 — liderando a arquitetura de sistemas de alta performance que impactam milhares de alunos.',
         highlights: [
-          'Liderei a refatoração de componentes críticos, reduzindo o tempo de build em 40% e melhorando a performance percebida',
-          'Parceria estratégica com UX desde wireframes, antecipando problemas de usabilidade e acelerando o handoff em 25%',
-          'Desenhei contratos REST eficientes com backend, eliminando 3 rodadas de revisão por sprint',
-          'Implementei práticas de acessibilidade (WCAG 2.1 AA) que ampliaram o alcance da plataforma a usuários com deficiência visual',
-          'Entreguei plataforma de aprendizado corporativo acessível para +10 mil alunos globais simultâneos',
+          'Lidero a arquitetura de interfaces de alta performance com TypeScript, Go e Bun, focando em reduzir latência e melhorar a experiência do usuário final',
+          'Otimizei a performance do sistema em 90% (build e runtime) e remediai vulnerabilidades críticas de segurança liderando a migração do Node 16 para o Node 22',
+          'Lidero migrações críticas para Vite e Bun, otimizando o ambiente de desenvolvimento e reduzindo significativamente os tempos de build e entrega em ciclos de CI/CD',
+          'Integro workflows de IA Generativa (GenAI) para automatizar refatoração de código e aumentar a confiabilidade e consistência geral do sistema',
         ],
-        technologies: ['Vue.js', 'Figma', 'REST APIs', 'Accessibility'],
+        technologies: ['TypeScript', 'Go', 'Bun', 'Vue.js', 'Vite', 'GenAI', 'CI/CD'],
         level: 9,
         hackCommand: 'ssh root[at]dot-digital-group --decode-mission',
         hackOutput: [
@@ -405,6 +404,12 @@ export default {
         description:
           'Estudos desde 2017 me levaram a rodar um full node Bitcoin e criar um node Lightning Network para redirecionar transações. Entendimento profundo de consenso, criptografia e escalabilidade layer-2.',
         icon: 'Zap',
+      },
+      {
+        name: 'Homelab & Rede Doméstica',
+        description:
+          'Projeto rodando em um Orange Pi 5 para gerenciar e otimizar recursos da minha rede doméstica, incluindo automação, monitoramento e serviços self-hosted.',
+        icon: 'Server',
       },
     ],
     nextMission: {

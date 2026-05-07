@@ -116,19 +116,18 @@ export default {
       {
         id: 'dot-digital',
         company: 'DOT Digital Group',
-        role: 'Senior Frontend Developer',
+        role: 'Senior Software Engineer',
         period: 'June 2025 - Present',
         location: 'Brazil',
         description:
-          'Senior frontend engineer at Dot Digital Group — a global leader in corporate education for Fortune 500 — translating complex designs into scalable, accessible Vue.js applications that impact thousands of learners.',
+          'Senior software engineer at Dot Digital Group — a global leader in corporate education for Fortune 500 — leading the architecture of high-performance systems that impact thousands of learners.',
         highlights: [
-          'Led refactoring of critical components, reducing build time by 40% and improving perceived performance',
-          'Strategic partnership with UX from wireframes, anticipating usability issues and accelerating handoff by 25%',
-          'Designed efficient REST contracts with backend, eliminating 3 review rounds per sprint',
-          'Implemented WCAG 2.1 AA accessibility practices, expanding platform reach to visually impaired users',
-          'Delivered accessible corporate learning platform serving 10,000+ concurrent global learners',
+          'Leading the architecture of high-performance interfaces using TypeScript, Go, and Bun, focusing on reducing latency and improving end-user experience',
+          'Optimized system performance by 90% (build and runtime) and remediated critical security vulnerabilities by leading the migration from Node 16 to Node 22',
+          'Spearheading critical migrations to Vite and Bun, optimizing the development environment and significantly reducing build and delivery times in CI/CD cycles',
+          'Integrating Generative AI (GenAI) workflows to automate code refactoring and enhance overall system reliability and consistency',
         ],
-        technologies: ['Vue.js', 'Figma', 'REST APIs', 'Accessibility'],
+        technologies: ['TypeScript', 'Go', 'Bun', 'Vue.js', 'Vite', 'GenAI', 'CI/CD'],
         level: 9,
         hackCommand: 'ssh root[at]dot-digital-group --decode-mission',
         hackOutput: [
@@ -405,6 +404,12 @@ export default {
         description:
           'Studies since 2017 led me to run a full Bitcoin node and create a Lightning Network node to route transactions. Deep understanding of consensus, cryptography, and layer-2 scalability.',
         icon: 'Zap',
+      },
+      {
+        name: 'Homelab & Home Network',
+        description:
+          'Project running on an Orange Pi 5 to manage and optimize my home network resources, including automation, monitoring, and self-hosted services.',
+        icon: 'Server',
       },
     ],
     nextMission: {
