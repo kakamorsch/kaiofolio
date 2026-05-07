@@ -18,7 +18,7 @@
 
 		<!-- Floating particles/decorative elements -->
 		<div
-			class="absolute top-20 left-10 w-2 h-2 bg-cyber-accent rounded-full animate-pulse opacity-60"
+			class="absolute top-4 left-4 w-2 h-2 bg-cyber-accent rounded-full animate-pulse opacity-60"
 			aria-hidden="true"
 		/>
 		<div
