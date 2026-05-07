@@ -81,6 +81,18 @@
 								{{ localizedContact.linkedin }}
 							</a>
 						</li>
+						<li>
+							<a
+								:href="`https://${localizedContact.github}`"
+								target="_blank"
+								rel="noopener noreferrer"
+								:aria-label="`${localizedContact.github} — ${$t('a11y.openInNewTab')}`"
+								class="flex items-center gap-2 text-cyber-mutedFg hover:text-cyber-accent transition-colors focus:outline-none focus:ring-2 focus:ring-cyber-accent focus:ring-offset-2 focus:ring-offset-cyber-bg"
+							>
+								<span class="text-cyber-accent" aria-hidden="true">></span>
+								{{ localizedContact.github }}
+							</a>
+						</li>
 						<li class="flex items-center gap-2 text-cyber-mutedFg">
 							<span class="text-cyber-accent" aria-hidden="true">></span>
 							{{ localizedContact.phone }}

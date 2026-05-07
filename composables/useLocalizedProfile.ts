@@ -4,6 +4,7 @@ export interface LocalizedContact {
   phone: string
   email: string
   linkedin: string
+  github: string
   portfolio: string
 }
 
@@ -79,6 +80,7 @@ export function useLocalizedProfile() {
     phone: t('profile.contact.phone'),
     email: rawMessage(tm, 'profile.contact.email'),
     linkedin: t('profile.contact.linkedin'),
+    github: t('profile.contact.github'),
     portfolio: t('profile.contact.portfolio'),
   }))
   const localizedLevel = computed(() => t('profile.level'))

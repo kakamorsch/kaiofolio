@@ -3,6 +3,7 @@ export default {
     status: 'Online // Disponível para contratação',
     ctaContact: 'Iniciar Contato',
     ctaLinkedIn: 'LinkedIn',
+    ctaGitHub: 'GitHub',
     systemStatus: 'Status do Sistema',
     name: 'Nome',
     level: 'Level',
@@ -101,6 +102,7 @@ export default {
       phone: '+55 21 99536-4470',
       email: 'kakamorsch[at]gmail.com',
       linkedin: 'linkedin.com/in/kakamorsch',
+      github: 'github.com/kakamorsch',
       portfolio: 'kakamorsch.github.io',
     },
     summary:

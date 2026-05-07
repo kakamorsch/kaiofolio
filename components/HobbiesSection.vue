@@ -21,7 +21,6 @@
           v-for="(hobby, index) in localizedHobbies"
           :key="hobby.name"
           class="group relative bg-cyber-card border border-cyber-border cyber-chamfer p-6 md:p-8 hover:border-cyber-accent-secondary hover:shadow-neon-secondary transition-all duration-300"
-          :class="index % 2 === 1 ? 'md:translate-y-4' : ''"
         >
           <!-- Corner accents -->
           <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-cyber-border group-hover:border-cyber-accent-secondary transition-colors" aria-hidden="true" />

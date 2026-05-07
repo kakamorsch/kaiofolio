@@ -120,9 +120,18 @@
 							target="_blank"
 							rel="noopener noreferrer"
 							:aria-label="`${$t('hero.ctaLinkedIn')} — ${$t('a11y.openInNewTab')}`"
-							class="group relative px-8 py-3 border-2 border-cyber-accent-secondary text-cyber-accent-secondary font-tech uppercase tracking-widest text-sm cyber-chamfer-sm hover:bg-cyber-accent-secondary hover:text-cyber-bg transition-all duration-150 cyber-glow-secondary focus:outline-none focus:ring-2 focus:ring-cyber-accent-secondary focus:ring-offset-2 focus:ring-offset-cyber-bg"
+							class="group relative px-8 py-3 border-2 border-cyber-accent-secondary text-cyber-accent-secondary font-tech uppercase tracking-widest text-sm cyber-chamfer-sm hover:bg-cyber-accent-secondary hover:text-white transition-all duration-150 cyber-glow-secondary focus:outline-none focus:ring-2 focus:ring-cyber-accent-secondary focus:ring-offset-2 focus:ring-offset-cyber-bg"
 						>
 							<span class="relative z-10">{{ $t('hero.ctaLinkedIn') }}</span>
+						</a>
+						<a
+							:href="`https://${localizedContact.github}`"
+							target="_blank"
+							rel="noopener noreferrer"
+							:aria-label="`${$t('hero.ctaGitHub')} — ${$t('a11y.openInNewTab')}`"
+							class="group relative px-8 py-3 border-2 border-cyber-accent-tertiary text-cyber-accent-tertiary font-tech uppercase tracking-widest text-sm cyber-chamfer-sm hover:bg-cyber-accent-tertiary hover:text-white transition-all duration-150 cyber-glow-tertiary focus:outline-none focus:ring-2 focus:ring-cyber-accent-tertiary focus:ring-offset-2 focus:ring-offset-cyber-bg"
+						>
+							<span class="relative z-10">{{ $t('hero.ctaGitHub') }}</span>
 						</a>
 					</div>
 				</div>
@@ -246,7 +255,7 @@
 
 			<!-- Scroll indicator -->
 			<div
-				class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+				class="mt-12 sm:mt-0 sm:absolute sm:bottom-8 sm:left-1/2 sm:-translate-x-1/2 flex flex-col items-center gap-2"
 				aria-hidden="true"
 			>
 				<span
