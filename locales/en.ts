@@ -53,6 +53,17 @@ export default {
     lockedBadge: 'Next Phase Unlocking Soon',
     requires: 'Requires: Level {level} // Senior Software Engineer',
   },
+  warStories: {
+    sectionLabel: 'Battlefield',
+    sectionTitle: 'WAR ',
+    sectionTitleHighlight: 'STORIES',
+    sectionDescription: 'Real crisis narratives, decisions under pressure, and high-impact deliveries.',
+    contextLabel: 'Context',
+    problemLabel: 'Problem',
+    actionLabel: 'Action',
+    resultLabel: 'Result',
+    lessonsLabel: 'Lessons',
+  },
   footer: {
     brandDescription:
       'Senior Software Engineer specialized in distributed systems, financial technology, and scalable e-commerce solutions.',
@@ -99,6 +110,7 @@ export default {
     sectionHobbies: 'Interests',
     sectionNextMission: 'Next Mission',
     sectionFooter: 'Footer',
+    sectionWarStories: 'War Stories',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -430,5 +442,39 @@ export default {
       location: 'APAC / REMOTE',
       requiredLevel: 10,
     },
+    warStories: [
+      {
+        id: 'fabrica-digital-lockdown',
+        company: 'Fabrica Digital',
+        period: '2020',
+        title: 'Virtual Meeting Room in Vue — MVP in 4 Weeks',
+        context:
+          'I was on vacation when the 2020 lockdown was declared. With nothing to do, I decided to cut my vacation short and offer help. The company owner got excited and challenged me: build a virtual meeting room tool to integrate into their intranet app.',
+        problem:
+          'The company needed an internal video conferencing solution but had no budget for external tools nor time to hire specialists. The deadline was impossible: 4 weeks for a functional MVP.',
+        action:
+          'I accepted the challenge and learned Vue.js while building — I had never used the framework before. I built from scratch a real-time video conferencing application with Vue, WebRTC and Socket.io, integrating it directly into the existing intranet.',
+        result:
+          'Delivered the working prototype in the fourth week. The tool was presented to clients and validated as a competitive differentiator for the company\'s intranet platform.',
+        lessons:
+          'Pressure creates focus. Learning a new technology in production, with real stakeholders and a real deadline, accelerates growth exponentially.',
+      },
+      {
+        id: 'stone-antifraude',
+        company: 'Pagar.me (Stone)',
+        period: '2022',
+        title: 'Anti-Fraud Retry Button — +$10M in 2 Weeks',
+        context:
+          'Monitoring user sessions via FullStory on the transactions dashboard, we noticed a recurring pattern: whenever a transaction was rejected by anti-fraud, the user seemed lost, entering and leaving the screen repeatedly.',
+        problem:
+          'Legitimate transactions were being blocked by conservative anti-fraud settings. Merchants did not understand the rejection reason and had no alternative to recover the sale, resulting in direct revenue loss.',
+        action:
+          'In an emergency meeting with the BFF team, the Risk PO and myself, we proposed a retry button with a disclaimer where the merchant assumed the risks in exchange for a second evaluation with more liberal rules. We developed and deployed within days.',
+        result:
+          'In the first week, the button generated over $2 million in recovered transactions. By the second week, it surpassed $10 million. It was the most valuable deliverable of my career.',
+        lessons:
+          'Observing user behavior with attention generates business opportunities that no planned backlog would capture. Proximity to the product and fast decision-making outperform bureaucratic processes.',
+      },
+    ],
   },
 }

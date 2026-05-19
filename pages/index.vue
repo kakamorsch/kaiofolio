@@ -2,6 +2,7 @@
   <div>
     <HeroSection />
     <ExperienceSection />
+    <WarStoriesSection />
     <SkillsSection />
     <HobbiesSection />
     <NextMissionSection />

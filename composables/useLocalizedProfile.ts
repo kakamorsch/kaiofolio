@@ -52,6 +52,18 @@ export interface LocalizedNextMission {
   requiredLevel: number
 }
 
+export interface LocalizedWarStory {
+  id: string
+  company: string
+  period: string
+  title: string
+  context: string
+  problem: string
+  action: string
+  result: string
+  lessons: string
+}
+
 function resolveArrayStrings(t: (key: string) => string, baseKey: string, rawArray: any[] | undefined): string[] {
   if (!Array.isArray(rawArray)) return []
   return Array.from({ length: rawArray.length }, (_, i) => t(`${baseKey}.${i}`))
@@ -150,6 +162,22 @@ export function useLocalizedProfile() {
     requiredLevel: Number(tm('profile.nextMission.requiredLevel')) || 0,
   }))
 
+  const localizedWarStories = computed<LocalizedWarStory[]>(() => {
+    const raw = tm('profile.warStories') as any[]
+    if (!Array.isArray(raw)) return []
+    return raw.map((_, i) => ({
+      id: t(`profile.warStories.${i}.id`),
+      company: t(`profile.warStories.${i}.company`),
+      period: t(`profile.warStories.${i}.period`),
+      title: t(`profile.warStories.${i}.title`),
+      context: t(`profile.warStories.${i}.context`),
+      problem: t(`profile.warStories.${i}.problem`),
+      action: t(`profile.warStories.${i}.action`),
+      result: t(`profile.warStories.${i}.result`),
+      lessons: t(`profile.warStories.${i}.lessons`),
+    }))
+  })
+
   const profile = computed(() => ({
     name: localizedName.value,
     title: localizedTitle.value,
@@ -169,6 +197,7 @@ export function useLocalizedProfile() {
     languages: localizedLanguages.value,
     hobbies: localizedHobbies.value,
     nextMission: localizedNextMission.value,
+    warStories: localizedWarStories.value,
   }))
 
   return {
@@ -192,5 +221,6 @@ export function useLocalizedProfile() {
     localizedLanguages,
     localizedHobbies,
     localizedNextMission,
+    localizedWarStories,
   }
 }

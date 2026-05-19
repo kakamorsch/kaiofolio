@@ -53,6 +53,17 @@ export default {
     lockedBadge: 'Próxima Fase Desbloqueada em Breve',
     requires: 'Requer: Level {level} // Senior Software Engineer',
   },
+  warStories: {
+    sectionLabel: 'Campo de Batalha',
+    sectionTitle: 'WAR ',
+    sectionTitleHighlight: 'STORIES',
+    sectionDescription: 'Narrativas de crises reais, decisões sob pressão e entregas de alto impacto.',
+    contextLabel: 'Contexto',
+    problemLabel: 'Problema',
+    actionLabel: 'Ação',
+    resultLabel: 'Resultado',
+    lessonsLabel: 'Lições',
+  },
   footer: {
     brandDescription:
       'Senior Software Engineer especializado em sistemas distribuídos, tecnologia financeira e soluções de e-commerce escaláveis.',
@@ -99,6 +110,7 @@ export default {
     sectionHobbies: 'Interesses',
     sectionNextMission: 'Próxima Missão',
     sectionFooter: 'Rodapé',
+    sectionWarStories: 'War Stories',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -430,5 +442,39 @@ export default {
       location: 'APAC / REMOTO',
       requiredLevel: 10,
     },
+    warStories: [
+      {
+        id: 'fabrica-digital-lockdown',
+        company: 'Fabrica Digital',
+        period: '2020',
+        title: 'Sala de Reuniões Virtual em Vue — MVP em 4 Semanas',
+        context:
+          'Estava de férias quando o lockdown de 2020 foi decretado. Sem nada para fazer, decidi cortar as férias e oferecer ajuda. O dono da empresa se empolgou e me desafiou: construir uma ferramenta de sala de reuniões virtual para integrar na intranet da empresa.',
+        problem:
+          'A empresa precisava de uma solução de videoconferência interna, mas não tinha orçamento para ferramentas externas nem tempo para contratar especialistas. O prazo era impossível: 4 semanas para um MVP funcional.',
+        action:
+          'Aceitei o desafio e aprendi Vue.js enquanto desenvolvia — nunca tinha usado o framework antes. Construí do zero uma aplicação de videoconferência em tempo real com Vue, WebRTC e Socket.io, integrando-a diretamente na intranet existente.',
+        result:
+          'Entreguei o protótipo funcional na quarta semana. A ferramenta foi apresentada aos clientes e validada como diferencial competitivo para a plataforma de intranet da empresa.',
+        lessons:
+          'Pressão cria foco. Aprender uma tecnologia nova em produção, com stakeholders reais e deadline real, acelera o crescimento exponencialmente.',
+      },
+      {
+        id: 'stone-antifraude',
+        company: 'Pagar.me (Stone)',
+        period: '2022',
+        title: 'Botão de Retentativa Anti-Fraude — +R$ 10MM em 2 Semanas',
+        context:
+          'Monitorando sessões de usuários via FullStory na dashboard de transações, percebemos um padrão recorrente: sempre que uma transação era rejeitada pelo antifraude, o usuário parecia perdido, entrando e saindo da tela repetidamente.',
+        problem:
+          'Transações legítimas estavam sendo bloqueadas pelo antifraude com configurações conservadoras. Os comerciantes não entendiam o motivo da rejeição e não tinham alternativa para recuperar a venda, resultando em perda direta de receita.',
+        action:
+          'Em reunião de emergência com o time de BFF, a PO de Riscos e eu, propusemos um botão de retentativa com um disclaimer onde o comerciante assumia os riscos em troca de uma segunda avaliação com regras mais liberais. Desenvolvemos e deployamos em dias.',
+        result:
+          'Na primeira semana, o botão gerou mais de R$ 2 milhões em transações recuperadas. Na segunda semana, passou de R$ 10 milhões. Foi a demanda mais valiosa da minha carreira.',
+        lessons:
+          'Observar comportamento do usuário com atenção gera oportunidades de negócio que nenhum backlog planejado capturaria. Proximidade com o produto e decisão rápida superam processos burocráticos.',
+      },
+    ],
   },
 }

@@ -53,6 +53,17 @@ export default {
     lockedBadge: '次のフェーズは間もなく解除',
     requires: '要求: レベル {level} // Senior Software Engineer',
   },
+  warStories: {
+    sectionLabel: '戦場',
+    sectionTitle: 'WAR ',
+    sectionTitleHighlight: 'STORIES',
+    sectionDescription: '実際の危機の物語、プレッシャーの中での意思決定、そして高い影響力を持つデリバリー。',
+    contextLabel: '背景',
+    problemLabel: '問題',
+    actionLabel: 'アクション',
+    resultLabel: '結果',
+    lessonsLabel: '教訓',
+  },
   footer: {
     brandDescription:
       '分散システム、金融テクノロジー、スケーラブルなEコマースソリューションを専門とするシニアソフトウェアエンジニア。',
@@ -99,6 +110,7 @@ export default {
     sectionHobbies: '趣味',
     sectionNextMission: '次のミッション',
     sectionFooter: 'フッター',
+    sectionWarStories: 'War Stories',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -430,5 +442,39 @@ export default {
       location: 'APAC / リモート',
       requiredLevel: 10,
     },
+    warStories: [
+      {
+        id: 'fabrica-digital-lockdown',
+        company: 'Fabrica Digital',
+        period: '2020',
+        title: 'Vueによるバーチャル会議室 — 4週間でMVP',
+        context:
+          '2020年のロックダウンが宣言された時、私は休暇中でした。やることがなかったので、休暇を切り上げて手助けを申し出ました。会社のオーナーは興奮し、私に挑戦を投げかけました：社内イントラネットに統合するバーチャル会議室ツールを構築すること。',
+        problem:
+          '社内ビデオ会議ソリューションが必要だったが、外部ツールの予算も、専門家を雇う時間もなかった。期限は不可能に思えた：機能するMVPを4週間で。',
+        action:
+          '挑戦を受け入れ、フレームワークを使ったことがなかった私は、構築しながらVue.jsを学びました。Vue、WebRTC、Socket.ioを使ってリアルタイムビデオ会議アプリケーションをゼロから構築し、既存のイントラネットに直接統合しました。',
+        result:
+          '4週目に動作するプロトタイプを納品。ツールはクライアントに提示され、社内イントラネットプラットフォームの差別化要因として評価されました。',
+        lessons:
+          'プレッシャーは集中力を生む。本番環境で新しい技術を学び、実際のステークホルダーと期限の中で成長することで、成長は指数関数的に加速する。',
+      },
+      {
+        id: 'stone-antifraude',
+        company: 'Pagar.me (Stone)',
+        period: '2022',
+        title: 'アンチファウド再試行ボタン — 2週間で+1,000万レアル',
+        context:
+          'FullStoryを使ってトランザクションダッシュボードのユーザーセッションを監視していたところ、繰り返し現れるパターンに気づきました：トランザクションがアンチファウドによって拒否されると、ユーザーは迷い、画面を行ったり来たりしていました。',
+        problem:
+          '正当なトランザクションが保守的なアンチファウド設定によってブロックされていました。商売人は拒否理由を理解しておらず、売上を回復する代替手段がなく、直接的な収益損失を招いていました。',
+        action:
+          'BFFチーム、リスクPO、私自身による緊急ミーティングで、商売人がリスクを引き受けることと引き換えに、より緩やかなルールによる2回目の評価を受けられる再試行ボタンを提案しました。数日以内に開発・展開しました。',
+        result:
+          '最初の週で、ボタンは200万レアル以上の回復トランザクションを生み出しました。2週目には1,000万レアルを超えました。私のキャリアで最も価値のあるデリバリーでした。',
+        lessons:
+          'ユーザーの行動に注意深く観察することで、計画されたバックログでは決して捉えられないビジネスチャンスが生まれる。プロダクトへの近さと迅速な意思決定が、官僚的なプロセスを上回る。',
+      },
+    ],
   },
 }
