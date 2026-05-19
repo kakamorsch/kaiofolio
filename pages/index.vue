@@ -12,6 +12,8 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 
+useSchemaOrgProfile()
+
 const langMap: Record<string, string> = {
   pt: 'pt-BR',
   en: 'en-US',

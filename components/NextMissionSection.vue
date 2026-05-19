@@ -1,5 +1,6 @@
 <template>
-  <section class="relative py-24 md:py-32 px-4 overflow-hidden" aria-label="Próxima missão" tabindex="-1">
+  <section class="relative py-24 md:py-32 px-4 overflow-hidden" :aria-label="$t('a11y.sectionNextMission')" tabindex="-1">
+    <h2 class="sr-only">{{ $t('a11y.sectionNextMission') }}</h2>
     <!-- Animated background -->
     <div class="absolute inset-0" aria-hidden="true">
       <div class="absolute inset-0 bg-gradient-to-b from-cyber-bg via-cyber-muted/20 to-cyber-bg" />

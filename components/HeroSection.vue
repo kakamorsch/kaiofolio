@@ -1,8 +1,9 @@
 <template>
 	<section
 		class="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden"
-		aria-label="Perfil"
+		:aria-label="$t('a11y.sectionProfile')"
 	>
+		<h2 class="sr-only">{{ $t('a11y.sectionProfile') }}</h2>
 		<!-- Background grid effect -->
 		<div class="absolute inset-0 opacity-20" aria-hidden="true">
 			<div

@@ -1,5 +1,6 @@
 <template>
-  <section id="hobbies" class="relative py-24 md:py-32 px-4" aria-label="Interesses e hobbies" tabindex="-1">
+  <section id="hobbies" class="relative py-24 md:py-32 px-4" :aria-label="$t('a11y.sectionHobbies')" tabindex="-1">
+    <h2 class="sr-only">{{ $t('a11y.sectionHobbies') }}</h2>
     <div class="max-w-6xl mx-auto">
       <!-- Section Header -->
       <div class="mb-16 space-y-4">

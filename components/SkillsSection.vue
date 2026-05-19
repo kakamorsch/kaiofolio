@@ -1,5 +1,6 @@
 <template>
-  <section id="capacitacoes" class="relative py-24 md:py-32 px-4" aria-label="Capacitações e qualificações" tabindex="-1">
+  <section id="capacitacoes" class="relative py-24 md:py-32 px-4" :aria-label="$t('a11y.sectionSkills')" tabindex="-1">
+    <h2 class="sr-only">{{ $t('a11y.sectionSkills') }}</h2>
     <!-- Circuit pattern background -->
     <div class="absolute inset-0 opacity-10" aria-hidden="true">
       <div class="absolute inset-0" style="background-image: linear-gradient(rgba(0,212,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(0,212,255,0.05) 1px, transparent 1px); background-size: 40px 40px;" />

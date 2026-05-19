@@ -1,5 +1,6 @@
 <template>
-	<footer class="relative py-16 px-4 border-t border-cyber-border" role="contentinfo">
+	<footer class="relative py-16 px-4 border-t border-cyber-border" role="contentinfo" :aria-label="$t('a11y.sectionFooter')">
+		<h2 class="sr-only">{{ $t('a11y.sectionFooter') }}</h2>
 		<div class="max-w-6xl mx-auto">
 			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
 				<!-- Brand -->
