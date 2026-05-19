@@ -107,7 +107,7 @@ export default {
       portfolio: 'kakamorsch.github.io',
     },
     summary:
-      'Engenheiro de Software Sénior com mais de 6 anos de experiência na arquitetura e escala de sistemas distribuídos de alto tráfego, plataformas transacionais B2C e infraestruturas financeiras resilientes. Especialista em mitigar latência e conectar microsserviços complexos de backend com ecossistemas frontend modernos de alta performance (React e Vue), garantindo idempotência e conformidade regulatória. Histórico comprovado na otimização de gateways de pagamento críticos com impacto direto na receita e retenção de utilizadores em larga escala.',
+      'Engenheiro de Software Sênior com mais de 6 anos de experiência na arquitetura e escala de sistemas distribuídos de alto tráfego, plataformas transacionais B2C e infraestruturas financeiras resilientes. Especialista em mitigar latência e conectar microsserviços complexos de backend com ecossistemas frontend modernos de alta performance (React e Vue), garantindo idempotência e conformidade regulatória. Histórico comprovado na otimização de gateways de pagamento críticos com impacto direto na receita e retenção de utilizadores em larga escala.',
     specialties: ['Go', 'Distributed Systems', 'React', 'Vue/Nuxt', 'Bun', 'High-Traffic B2C', 'Payment Gateways'],
     level: '9 // Senior',
     exp: '6+ Anos',
@@ -414,11 +414,11 @@ export default {
       },
     ],
     nextMission: {
-      title: 'MISSÃO INTERNACIONAL',
+      title: 'EXPANSÃO APAC & GLOBAL',
       description:
-        'Expansão para mercados globais. Buscando oportunidades fora do Brasil para aplicar expertise em sistemas distribuídos e tecnologia financeira em escala planetária.',
-      status: 'EM BREVE',
-      location: 'GLOBAL',
+        'Segmentando ativamente ecossistemas de engenharia de grande escala na região APAC (Japão, Singapura, Taiwan) e mercados globais. Buscando posições sênior para aplicar expertise profunda em arquiteturas transacionais de alta concorrência, tecnologia financeira distribuída e microsserviços de baixa latência.',
+      status: 'BUSCA ATIVA',
+      location: 'APAC / REMOTO',
       requiredLevel: 10,
     },
   },

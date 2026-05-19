@@ -414,11 +414,11 @@ export default {
       },
     ],
     nextMission: {
-      title: 'INTERNATIONAL MISSION',
+      title: 'APAC & GLOBAL EXPANSION',
       description:
-        'Expansion to global markets. Seeking opportunities outside Brazil to apply expertise in distributed systems and financial technology at a planetary scale.',
-      status: 'COMING SOON',
-      location: 'GLOBAL',
+        'Actively targeting large-scale engineering ecosystems across the APAC region (Japan, Singapore, Taiwan) and global markets. Seeking senior positions to apply deep expertise in high-concurrency transactional architectures, distributed financial technology, and low-latency microservices.',
+      status: 'ACTIVE SEARCH',
+      location: 'APAC / REMOTE',
       requiredLevel: 10,
     },
   },
