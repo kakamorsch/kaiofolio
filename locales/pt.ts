@@ -96,7 +96,7 @@ export default {
   profile: {
     name: 'KAIO MORSCH',
     title: 'SENIOR SOFTWARE ENGINEER',
-    subtitle: 'Sistemas Distribuídos & Tecnologia Financeira',
+    subtitle: 'Sistemas Distribuídos & Alta Disponibilidade B2C',
     location: 'Urubici, SC, Brasil',
     contact: {
       phone: '+55 21 99536-4470',
@@ -106,12 +106,12 @@ export default {
       portfolio: 'kakamorsch.github.io',
     },
     summary:
-      'Engenheiro de Software Senior com 6+ anos de experiência arquitetando e escalando sistemas de e-commerce e financeiros de alta performance. Expertise principal em conectar arquiteturas backend complexas com frontends de alta performance para entregar fluxos de pagamento resilientes e plataformas transacionais robustas. Histórico comprovado de otimização de gateways de pagamento que impactam diretamente a receita da empresa e impulsionam adoção de clientes através de integrações de API robustas.',
-    specialties: ['Go', 'Bun', 'Vue/Nuxt', 'React', 'Distributed Systems', 'Payment Gateways', 'E-commerce'],
+      'Engenheiro de Software Sénior com mais de 6 anos de experiência na arquitetura e escala de sistemas distribuídos de alto tráfego, plataformas transacionais B2C e infraestruturas financeiras resilientes. Especialista em mitigar latência e conectar microsserviços complexos de backend com ecossistemas frontend modernos de alta performance (React e Vue), garantindo idempotência e conformidade regulatória. Histórico comprovado na otimização de gateways de pagamento críticos com impacto direto na receita e retenção de utilizadores em larga escala.',
+    specialties: ['Go', 'Distributed Systems', 'React', 'Vue/Nuxt', 'Bun', 'High-Traffic B2C', 'Payment Gateways'],
     level: '9 // Senior',
     exp: '6+ Anos',
-    stack: 'Go / Bun / Vue',
-    focus: 'Pagamentos & E-com',
+    stack: 'Go / React / Vue / Distributed Systems',
+    focus: 'Escala & FinTech B2C',
     experiences: [
       {
         id: 'dot-digital',
@@ -120,14 +120,14 @@ export default {
         period: 'Junho 2025 - Presente',
         location: 'Brasil',
         description:
-          'Atuo como engenheiro de software sênior na Dot Digital Group — líder global em educação corporativa para Fortune 500 — liderando a arquitetura de sistemas de alta performance que impactam milhares de alunos.',
+          'Atuo como engenheiro de software sênior na Dot Digital Group — líder global em educação corporativa para Fortune 500 — liderando a arquitetura de sistemas distribuídos de alta performance que processam volumes massivos de utilizadores simultâneos.',
         highlights: [
-          'Lidero a arquitetura de interfaces de alta performance com TypeScript, Go e Bun, focando em reduzir latência e melhorar a experiência do usuário final',
-          'Otimizei a performance do sistema em 90% (build e runtime) e remediai vulnerabilidades críticas de segurança liderando a migração do Node 16 para o Node 22',
-          'Lidero migrações críticas para Vite e Bun, otimizando o ambiente de desenvolvimento e reduzindo significativamente os tempos de build e entrega em ciclos de CI/CD',
-          'Integro workflows de IA Generativa (GenAI) para automatizar refatoração de código e aumentar a confiabilidade e consistência geral do sistema',
+          'Lidero a arquitetura de aplicações de alto desempenho e concorrência massiva com TypeScript, Go e Bun, eliminando gargalos de latência no lado do cliente.',
+          'Otimizei a eficiência do sistema global em 90% (build e runtime) através da reestruturação de dependências críticas e migração arquitetural de infraestrutura legada.',
+          'Desenvolvo pipelines de CI/CD otimizados para deploys contínuos de microsserviços, mitigando riscos em produção com testes automatizados rigorosos e ferramentas de automação modernas.',
+          'Integro workflows avançados de IA Generativa (GenAI) para otimizar processos de engenharia, garantindo resiliência e redução de dívida técnica no ecossistema de software.',
         ],
-        technologies: ['TypeScript', 'Go', 'Bun', 'Vue.js', 'Vite', 'GenAI', 'CI/CD'],
+        technologies: ['TypeScript', 'Go', 'Bun', 'React', 'Vue.js', 'Vite', 'GenAI', 'CI/CD'],
         level: 9,
         hackCommand: 'ssh root[at]dot-digital-group --decode-mission',
         hackOutput: [
@@ -145,14 +145,14 @@ export default {
         period: 'Agosto 2024 - Presente',
         location: 'Brasil',
         description:
-          'Arquitetei e desenvolvi do zero um ecossistema de e-commerce e gestão de estoque fullstack, lidando com alta concorrência, consistência de dados e escalabilidade desde o primeiro commit até a produção.',
+          'Arquitetei e desenvolvi do zero um ecossistema de e-commerce e gestão transacional fullstack, projetado especificamente para mitigar falhas sob cenários de alta concorrência B2C.',
         highlights: [
-          'Arquitetei microsserviços em Go + Bun que suportam 1.000+ pedidos/hora com latência < 200ms',
-          'Construí frontend Vue/Nuxt com SSR que melhorou o LCP em 60% em relação à solução anterior',
-          'Modelei banco de dados relacional e cache layer que reduziram inconsistências de estoque de 12% para < 1%',
-          'Supervisionei o ciclo completo do SDLC — desde entrevistas com stakeholders até deploy automatizado em cloud',
+          'Desenvolvi microsserviços em Go e Bun capazes de suportar picos de tráfego intensos com latência estrita inferior a 200ms sob cargas elevadas.',
+          'Projetei soluções de UI/UX resilientes com estratégias avançadas de Server-Side Rendering (SSR), reduzindo o Largest Contentful Paint (LCP) em 60% e maximizando taxas de conversão.',
+          'Modelei a camada de persistência distribuída e caching em memória, reduzindo drasticamente inconsistências transacionais crónicas para menos de 1%.',
+          'Gerenciei todo o ciclo de vida do software (SDLC), desde o mapeamento com stakeholders globais até estratégias de orquestração automatizada em cloud.',
         ],
-        technologies: ['Go', 'Bun', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure'],
+        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure'],
         level: 8,
         hackCommand: 'bun run hack --target=kaze-solutions --fullstack',
         hackOutput: [
