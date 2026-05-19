@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     locales: [
       { code: 'pt', name: 'Português', file: 'pt.ts' },
       { code: 'en', name: 'English', file: 'en.ts' },
+      { code: 'ja', name: '日本語', file: 'ja.ts' },
     ],
     langDir: 'locales/',
     restructureDir: false,

@@ -12,9 +12,15 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
 
+const langMap: Record<string, string> = {
+  pt: 'pt-BR',
+  en: 'en-US',
+  ja: 'ja-JP',
+}
+
 useHead({
   htmlAttrs: {
-    lang: locale.value === 'pt' ? 'pt-BR' : 'en-US',
+    lang: computed(() => langMap[locale.value] || 'en-US'),
   },
 })
 

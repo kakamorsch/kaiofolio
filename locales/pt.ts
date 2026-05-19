@@ -69,6 +69,7 @@ export default {
     label: 'Idioma',
     pt: 'PT',
     en: 'EN',
+    ja: 'JA',
   },
   a11y: {
     skipToContent: 'Pular para o conteúdo',
