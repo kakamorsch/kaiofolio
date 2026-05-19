@@ -148,7 +148,7 @@
                       class="flex items-start gap-2 text-sm text-cyber-fg/80"
                     >
                       <span class="text-cyber-accent mt-1" aria-hidden="true">[+]</span>
-                      <span>{{ highlight }}</span>
+                      <MetricHighlight :text="highlight" />
                     </li>
                   </ul>
                 </div>
