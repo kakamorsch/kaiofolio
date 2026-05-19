@@ -134,6 +134,12 @@
 						>
 							<span class="relative z-10">{{ $t('hero.ctaGitHub') }}</span>
 						</a>
+						<NuxtLink
+							to="/resume"
+							class="group relative px-8 py-3 border-2 border-cyber-mutedFg text-cyber-mutedFg font-tech uppercase tracking-widest text-sm cyber-chamfer-sm hover:bg-cyber-mutedFg hover:text-cyber-bg transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-cyber-mutedFg focus:ring-offset-2 focus:ring-offset-cyber-bg"
+						>
+							<span class="relative z-10">{{ $t('hero.ctaResume') }}</span>
+						</NuxtLink>
 					</div>
 				</div>
 

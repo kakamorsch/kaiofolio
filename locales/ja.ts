@@ -4,6 +4,7 @@ export default {
     ctaContact: 'コンタクト開始',
     ctaLinkedIn: 'LinkedIn',
     ctaGitHub: 'GitHub',
+    ctaResume: '履歴書',
     systemStatus: 'システムステータス',
     name: '名前',
     level: 'レベル',

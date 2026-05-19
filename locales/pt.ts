@@ -4,6 +4,7 @@ export default {
     ctaContact: 'Iniciar Contato',
     ctaLinkedIn: 'LinkedIn',
     ctaGitHub: 'GitHub',
+    ctaResume: 'Currículo',
     systemStatus: 'Status do Sistema',
     name: 'Nome',
     level: 'Level',
