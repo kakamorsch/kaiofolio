@@ -10,7 +10,7 @@
   -->
   <div class="min-h-screen bg-white text-gray-900 font-sans">
     <!-- Print Button -->
-    <div class="no-print fixed top-4 right-4 z-50">
+    <div class="no-print fixed top-16 right-4 sm:top-4 sm:right-40 z-50">
       <button
         @click="handlePrint"
         class="px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded shadow hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500"

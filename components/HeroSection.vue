@@ -262,7 +262,7 @@
 
 			<!-- Scroll indicator -->
 			<div
-				class="mt-12 sm:mt-0 sm:absolute sm:bottom-8 sm:left-1/2 sm:-translate-x-1/2 flex flex-col items-center gap-2"
+				class="mt-16 lg:mt-24 w-full flex flex-col items-center gap-2"
 				aria-hidden="true"
 			>
 				<span
