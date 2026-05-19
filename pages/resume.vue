@@ -104,6 +104,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: false,
+})
+
 import { useLocalizedProfile } from '~/composables/useLocalizedProfile'
 
 const { profile } = useLocalizedProfile()
