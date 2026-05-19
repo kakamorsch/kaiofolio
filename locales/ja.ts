@@ -159,7 +159,7 @@ export default {
           '高度に最適化されたストレージ正規化およびRedisキャッシュプーリング構造を設計し、データ不整合を1%未満に低減。',
           '目標定義からクラウド非依存プラットフォーム展開まで、完全なソフトウェア開発ライフサイクル（SDLC）パイプラインを指揮。',
         ],
-        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure'],
+        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure', 'High-Traffic B2C'],
         level: 8,
         hackCommand: 'bun run hack --target=kaze-solutions --fullstack',
         hackOutput: [

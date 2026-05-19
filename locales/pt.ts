@@ -159,7 +159,7 @@ export default {
           'Modelei a camada de persistência distribuída e caching em memória, reduzindo drasticamente inconsistências transacionais crónicas para menos de 1%.',
           'Gerenciei todo o ciclo de vida do software (SDLC), desde o mapeamento com stakeholders globais até estratégias de orquestração automatizada em cloud.',
         ],
-        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure'],
+        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure', 'High-Traffic B2C'],
         level: 8,
         hackCommand: 'bun run hack --target=kaze-solutions --fullstack',
         hackOutput: [

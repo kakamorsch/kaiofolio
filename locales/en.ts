@@ -159,7 +159,7 @@ export default {
           'Engineered highly optimized storage normalization and redis cache pooling structures, reducing data inconsistency down to less than 1%.',
           'Directed full Software Development Life Cycle (SDLC) pipelines from target definition to cloud-agnostic platform deployments.',
         ],
-        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure'],
+        technologies: ['Go', 'Bun', 'React', 'Vue', 'Nuxt', 'Microservices', 'Cloud Infrastructure', 'High-Traffic B2C'],
         level: 8,
         hackCommand: 'bun run hack --target=kaze-solutions --fullstack',
         hackOutput: [
