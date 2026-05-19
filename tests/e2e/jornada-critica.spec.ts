@@ -18,7 +18,7 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
     await page.waitForLoadState('networkidle')
 
     await expect(page.getByText('Online // Disponível para contratação')).toBeVisible()
-    await expect(page.getByText('Sistemas Distribuídos & Tecnologia Financeira')).toBeVisible()
+    await expect(page.getByText('Sistemas Distribuídos & Alta Disponibilidade B2C')).toBeVisible()
     await expect(page.getByRole('link', { name: 'Iniciar Contato' })).toBeVisible()
     await expect(page.getByText('Trajetória Profissional')).toBeVisible()
     await expect(page.getByText('ACESSANDO HISTÓRICO')).toBeVisible()
@@ -32,7 +32,7 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
     await page.waitForLoadState('networkidle')
 
     await expect(page.getByText('Online // Available for hire')).toBeVisible()
-    await expect(page.getByText('Distributed Systems & Financial Tech')).toBeVisible()
+    await expect(page.getByText('Distributed Systems & High-Traffic B2C Platforms')).toBeVisible()
     await expect(page.getByRole('link', { name: 'Initiate Contact' })).toBeVisible()
     await expect(page.getByText('Professional Trajectory')).toBeVisible()
     await expect(page.getByText('ACCESSING HISTORY')).toBeVisible()
@@ -73,8 +73,8 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
     // Verifica dentro do card específico
     await expect(pagarmeCard.getByText('Objetivos Completados')).toBeVisible()
     await expect(pagarmeCard.getByText('Arsenal Tecnológico')).toBeVisible()
-    await expect(pagarmeCard.getByText('Implementei features core contribuindo para aumento de 45% na receita')).toBeVisible()
-    await expect(pagarmeCard.getByText('Reduzi erros de processamento de transações em 20%')).toBeVisible()
+    await expect(pagarmeCard.getByText('Implementei features core no gateway que impulsionaram receita em 45% YoY através de novos métodos de pagamento')).toBeVisible()
+    await expect(pagarmeCard.getByText('Reduzi taxa de erros de processamento em 20% introduzindo retry policies e circuit breakers customizados')).toBeVisible()
   })
 
   test('deve expandir uma experiência e exibir detalhes em inglês', async ({ page, context }) => {
@@ -91,8 +91,8 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
 
     await expect(pagarmeCard.getByText('Completed Objectives')).toBeVisible()
     await expect(pagarmeCard.getByText('Tech Arsenal')).toBeVisible()
-    await expect(pagarmeCard.getByText('Implemented core features contributing to 45% increase in revenue')).toBeVisible()
-    await expect(pagarmeCard.getByText('Reduced transaction processing errors by 20%')).toBeVisible()
+    await expect(pagarmeCard.getByText('Implemented core gateway features driving 45% YoY revenue growth through new payment methods')).toBeVisible()
+    await expect(pagarmeCard.getByText('Reduced transaction error rate by 20% introducing custom retry policies and circuit breakers')).toBeVisible()
   })
 
   test('deve filtrar experiências por tecnologia e mostrar resultados corretos', async ({ page }) => {
