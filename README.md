@@ -2,6 +2,8 @@
 
 > **A gamified, high-conversion portfolio engineered for Senior Software Engineer positioning.**  
 > Deployed at: [kakamorsch.com.br](https://kakamorsch.com.br)
+>
+> ![CI](https://github.com/kakamorsch/kaiofolio/actions/workflows/ci.yml/badge.svg)
 
 ---
 
