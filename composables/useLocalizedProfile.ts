@@ -13,6 +13,7 @@ export interface LocalizedExperience {
   company: string
   role: string
   period: string
+  employmentType?: string
   location: string
   description: string
   highlights: string[]
@@ -64,6 +65,12 @@ export interface LocalizedWarStory {
   lessons: string
 }
 
+export interface LocalizedSkillCategory {
+  name: string
+  description: string
+  items: string[]
+}
+
 function resolveArrayStrings(t: (key: string) => string, baseKey: string, rawArray: any[] | undefined): string[] {
   if (!Array.isArray(rawArray)) return []
   return Array.from({ length: rawArray.length }, (_, i) => t(`${baseKey}.${i}`))
@@ -80,7 +87,7 @@ function rawMessage(tm: (key: string) => unknown, key: string): string {
 }
 
 export function useLocalizedProfile() {
-  const { t, tm, locale } = useI18n()
+  const { t, tm, te, locale } = useI18n()
 
   const localizedName = computed(() => t('profile.name'))
   const localizedTitle = computed(() => t('profile.title'))
@@ -108,6 +115,7 @@ export function useLocalizedProfile() {
       company: t(`profile.experiences.${i}.company`),
       role: t(`profile.experiences.${i}.role`),
       period: t(`profile.experiences.${i}.period`),
+      employmentType: te(`profile.experiences.${i}.employmentType`) ? t(`profile.experiences.${i}.employmentType`) : undefined,
       location: t(`profile.experiences.${i}.location`),
       description: t(`profile.experiences.${i}.description`),
       highlights: resolveArrayStrings(t, `profile.experiences.${i}.highlights`, raw[i]?.highlights),
@@ -119,6 +127,16 @@ export function useLocalizedProfile() {
   })
 
   const localizedSkills = computed(() => resolveArrayStrings(t, 'profile.skills', tm('profile.skills') as any[]))
+
+  const localizedSkillCategories = computed<LocalizedSkillCategory[]>(() => {
+    const raw = tm('profile.skillCategories') as any[]
+    if (!Array.isArray(raw)) return []
+    return raw.map((_, i) => ({
+      name: t(`profile.skillCategories.${i}.name`),
+      description: t(`profile.skillCategories.${i}.description`),
+      items: resolveArrayStrings(t, `profile.skillCategories.${i}.items`, raw[i]?.items),
+    }))
+  })
 
   const localizedCertifications = computed<LocalizedCertification[]>(() => {
     const raw = tm('profile.certifications') as any[]
@@ -192,6 +210,7 @@ export function useLocalizedProfile() {
     focus: localizedFocus.value,
     experiences: localizedExperiences.value,
     skills: localizedSkills.value,
+    skillCategories: localizedSkillCategories.value,
     certifications: localizedCertifications.value,
     education: localizedEducation.value,
     languages: localizedLanguages.value,
@@ -216,6 +235,7 @@ export function useLocalizedProfile() {
     localizedFocus,
     localizedExperiences,
     localizedSkills,
+    localizedSkillCategories,
     localizedCertifications,
     localizedEducation,
     localizedLanguages,

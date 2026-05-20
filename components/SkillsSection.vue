@@ -29,16 +29,48 @@
             {{ $t('skills.skillsMatrix') }}
           </div>
 
-          <ul class="flex flex-wrap gap-2" role="list" :aria-label="$t('a11y.techArsenalList')">
-            <li
-              v-for="(skill, index) in localizedSkills"
-              :key="skill"
-              class="group relative px-4 py-2 text-xs font-tech uppercase tracking-wider border border-cyber-border cyber-chamfer-sm text-cyber-mutedFg hover:border-cyber-accent-tertiary hover:text-cyber-accent-tertiary hover:shadow-neon-tertiary transition-all duration-200 cursor-default"
-              :style="{ animationDelay: `${index * 50}ms` }"
+          <div class="space-y-6" role="list" :aria-label="$t('a11y.techArsenalList')">
+            <div
+              v-for="(cat, catIndex) in localizedSkillCategories"
+              :key="cat.name"
+              role="listitem"
+              class="relative"
             >
-              {{ skill }}
-            </li>
-          </ul>
+              <!-- Category Header -->
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-xs font-tech uppercase tracking-widest"
+                  :class="isPriorityCategory(cat.name) ? 'text-cyber-accent' : 'text-cyber-mutedFg'"
+                >
+                  {{ cat.name }}
+                </h3>
+                <span
+                  v-if="isPriorityCategory(cat.name)"
+                  class="px-1.5 py-0.5 text-[9px] font-tech uppercase tracking-wider bg-cyber-accent/10 text-cyber-accent border border-cyber-accent/30"
+                >
+                  core
+                </span>
+              </div>
+              <p class="text-[11px] text-cyber-mutedFg font-mono mb-2 leading-snug">
+                {{ cat.description }}
+              </p>
+
+              <!-- Category Tags -->
+              <ul class="flex flex-wrap gap-2">
+                <li
+                  v-for="(skill, skillIndex) in cat.items"
+                  :key="skill"
+                  class="group relative px-3 py-1.5 text-[11px] font-tech uppercase tracking-wider border cyber-chamfer-sm transition-all duration-200 cursor-default"
+                  :class="isPriorityCategory(cat.name)
+                    ? 'border-cyber-accent/40 text-cyber-accent hover:border-cyber-accent hover:shadow-neon-sm'
+                    : 'border-cyber-border text-cyber-mutedFg hover:border-cyber-accent-tertiary hover:text-cyber-accent-tertiary hover:shadow-neon-tertiary'
+                  "
+                  :style="{ animationDelay: `${(catIndex * 100) + (skillIndex * 30)}ms` }"
+                >
+                  {{ skill }}
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Certifications Terminal -->
@@ -115,9 +147,14 @@
 import { useLocalizedProfile } from '~/composables/useLocalizedProfile'
 
 const {
-  localizedSkills,
+  localizedSkillCategories,
   localizedCertifications,
   localizedEducation,
   localizedLanguages,
 } = useLocalizedProfile()
+
+function isPriorityCategory(name: string): boolean {
+  const priorityNames = ['Backend & Runtime', 'Arquitetura & Sistemas', 'Architecture & Systems', 'バックエンド & ランタイム', 'アーキテクチャ & システム']
+  return priorityNames.includes(name)
+}
 </script>
