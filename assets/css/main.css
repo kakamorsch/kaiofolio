@@ -173,7 +173,44 @@
 
   .animate-pulse,
   .animate-blink,
-  .animate-bounce {
+  .animate-bounce,
+  .animate-float,
+  .animate-glitch,
+  .animate-scanline,
+  .animate-rgbShift,
+  .animate-pulseGlow,
+  .animate-typing {
     animation: none !important;
+  }
+
+  /* Hide heavy visual overlays */
+  .scanlines {
+    display: none !important;
+  }
+  .circuit-bg {
+    background-image: none !important;
+  }
+
+  /* Disable glitch pseudo-elements */
+  .cyber-glitch::before,
+  .cyber-glitch::after {
+    display: none !important;
+  }
+
+  /* Reduce ambient glow to static border */
+  .cyber-glow,
+  .cyber-glow-secondary,
+  .cyber-glow-tertiary {
+    box-shadow: none !important;
+  }
+  .cyber-text-glow,
+  .cyber-text-glow-secondary {
+    text-shadow: none !important;
+  }
+
+  /* Terminal cursor becomes static block */
+  .terminal-cursor::after {
+    animation: none !important;
+    opacity: 1 !important;
   }
 }
