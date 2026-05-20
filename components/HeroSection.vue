@@ -145,32 +145,33 @@
 
 				<!-- Right: HUD Panel -->
 				<div class="lg:col-span-2 hidden lg:block">
-					<div
-						class="holographic cyber-chamfer p-6 space-y-4"
-						role="region"
-						:aria-label="$t('a11y.systemStatusPanel')"
-					>
+					<div class="relative">
 						<!-- Corner accents -->
 						<div
-							class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-cyber-accent"
+							class="absolute -top-px -left-px w-4 h-4 border-t-2 border-l-2 border-cyber-accent z-10"
 							aria-hidden="true"
 						/>
 						<div
-							class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-cyber-accent"
+							class="absolute -top-px -right-px w-4 h-4 border-t-2 border-r-2 border-cyber-accent z-10"
 							aria-hidden="true"
 						/>
 						<div
-							class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-cyber-accent"
+							class="absolute -bottom-px -left-px w-4 h-4 border-b-2 border-l-2 border-cyber-accent z-10"
 							aria-hidden="true"
 						/>
 						<div
-							class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-cyber-accent"
+							class="absolute -bottom-px -right-px w-4 h-4 border-b-2 border-r-2 border-cyber-accent z-10"
 							aria-hidden="true"
 						/>
 
 						<div
-							class="text-xs font-tech text-cyber-accent uppercase tracking-widest mb-4 flex items-center gap-2"
+							class="holographic cyber-chamfer p-6 space-y-4"
+							role="region"
+							:aria-label="$t('a11y.systemStatusPanel')"
 						>
+							<div
+								class="text-xs font-tech text-cyber-accent uppercase tracking-widest mb-4 flex items-center gap-2"
+							>
 							<span class="w-2 h-2 bg-cyber-accent animate-pulse" aria-hidden="true" />
 							{{ $t('hero.systemStatus') }}
 						</div>
@@ -256,6 +257,7 @@
 								</div>
 							</div>
 						</div>
+					</div>
 					</div>
 				</div>
 			</div>
