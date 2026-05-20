@@ -1,7 +1,3 @@
-import { ref } from 'vue'
-
-const selectedTech = ref<string | null>(null)
-
 // Mapeia tags do hero para variantes/aliases encontrados nas experiências
 const techAliases: Record<string, string[]> = {
   'Vue/Nuxt': ['Vue', 'Vue.js', 'Nuxt', 'Nuxt.js'],
@@ -14,6 +10,8 @@ const techAliases: Record<string, string[]> = {
 }
 
 export function useTechFilter() {
+  const selectedTech = useState<string | null>('techFilter', () => null)
+
   const setTechFilter = (tech: string | null) => {
     selectedTech.value = tech
   }
