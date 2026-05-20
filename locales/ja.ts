@@ -115,6 +115,7 @@ export default {
     sectionNextMission: '次のミッション',
     sectionFooter: 'フッター',
     sectionWarStories: 'War Stories',
+    sectionLeadForm: 'お問い合わせフォーム',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -515,6 +516,39 @@ export default {
           'ユーザーの行動に注意深く観察することで、計画されたバックログでは決して捉えられないビジネスチャンスが生まれる。プロダクトへの近さと迅速な意思決定が、官僚的なプロセスを上回る。',
       },
     ],
+  },
+  leadForm: {
+    sectionLabel: '新規ミッション',
+    sectionTitle: 'コンタクト ',
+    sectionTitleHighlight: '開始',
+    sectionDescription:
+      'プロジェクトや技術的な課題がありますか？ミッションを記述してください。確認の上、連絡いたします。',
+    clientName: '名前 / コードネーム',
+    clientNamePlaceholder: 'お名前または識別子を入力',
+    projectIdea: 'ミッション概要',
+    projectIdeaPlaceholder: 'プロジェクト、スコープ、目標を記述...',
+    estimatedBudget: '予算目安',
+    budgetOptions: {
+      small: '10万円以下',
+      medium: '10万円〜50万円',
+      large: '50万円〜150万円',
+      enterprise: '150万円以上',
+      undisclosed: '非公開',
+    },
+    techPreference: '希望スタック / 技術',
+    techPreferencePlaceholder: '例: Vue 3, Nuxt, Go, マイクロサービス...',
+    submit: 'データ送信',
+    submitting: '送信中...',
+    successTitle: '受信完了',
+    successMessage:
+      'ミッションはトリアージキューに登録されました。要件を分析し、近々セキュアチャネルよりご連絡いたします。',
+    errorTitle: '送信失敗',
+    errorMessage:
+      '送信を完了できませんでした。接続を確認の上、再度お試しください。',
+    requiredField: '必須項目',
+    ctaTitle: 'プロジェクトをお考えですか？',
+    ctaSubtitle: 'アイデアを教えてください。一緒に素晴らしいものを作りましょう。',
+    ctaButton: 'アイデアを送信',
   },
   caseStudy: {
     backToPortfolio: 'ポートフォリオに戻る',

@@ -1,6 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  runtimeConfig: {
+    n8nWebhookUrl: process.env.N8N_WEBHOOK_URL || '',
+    n8nPortfolioToken: process.env.N8N_PORTFOLIO_TOKEN || '',
+  },
   i18n: {
     strategy: 'no_prefix',
     defaultLocale: 'pt',

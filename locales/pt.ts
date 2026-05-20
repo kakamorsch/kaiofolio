@@ -115,6 +115,7 @@ export default {
     sectionNextMission: 'Próxima Missão',
     sectionFooter: 'Rodapé',
     sectionWarStories: 'War Stories',
+    sectionLeadForm: 'Formulário de Contato',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -515,6 +516,39 @@ export default {
           'Observar comportamento do usuário com atenção gera oportunidades de negócio que nenhum backlog planejado capturaria. Proximidade com o produto e decisão rápida superam processos burocráticos.',
       },
     ],
+  },
+  leadForm: {
+    sectionLabel: 'Nova Missão',
+    sectionTitle: 'INICIAR ',
+    sectionTitleHighlight: 'CONTATO',
+    sectionDescription:
+      'Tem um projeto ou desafio técnico? Descreva sua missão e entrarei em contato para debatermos a operação.',
+    clientName: 'Nome / Codinome',
+    clientNamePlaceholder: 'Seu nome ou identificador operacional',
+    projectIdea: 'Descrição da Missão',
+    projectIdeaPlaceholder: 'Descreva o projeto, escopo e objetivos...',
+    estimatedBudget: 'Orçamento Estimado',
+    budgetOptions: {
+      small: 'Até R$ 10k',
+      medium: 'R$ 10k — R$ 50k',
+      large: 'R$ 50k — R$ 150k',
+      enterprise: 'R$ 150k+',
+      undisclosed: 'Prefiro não informar',
+    },
+    techPreference: 'Stack / Tecnologias Preferidas',
+    techPreferencePlaceholder: 'Ex: Vue 3, Nuxt, Go, Microserviços...',
+    submit: 'Transmitir Dados',
+    submitting: 'Transmitindo...',
+    successTitle: 'Transmissão Recebida',
+    successMessage:
+      'Sua missão foi enfileirada para triagem. Analisarei os requisitos e retornarei em breve via canal seguro.',
+    errorTitle: 'Falha na Transmissão',
+    errorMessage:
+      'Não foi possível completar a transmissão. Verifique sua conexão e tente novamente.',
+    requiredField: 'Campo obrigatório',
+    ctaTitle: 'Tem um projeto em mente?',
+    ctaSubtitle: 'Descreva sua ideia e vamos construir algo incrível juntos.',
+    ctaButton: 'Submeter Ideia',
   },
   caseStudy: {
     backToPortfolio: 'Voltar ao Portfólio',

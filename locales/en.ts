@@ -115,6 +115,7 @@ export default {
     sectionNextMission: 'Next Mission',
     sectionFooter: 'Footer',
     sectionWarStories: 'War Stories',
+    sectionLeadForm: 'Contact Form',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -515,6 +516,39 @@ export default {
           'Observing user behavior with attention generates business opportunities that no planned backlog would capture. Proximity to the product and fast decision-making outperform bureaucratic processes.',
       },
     ],
+  },
+  leadForm: {
+    sectionLabel: 'New Mission',
+    sectionTitle: 'INITIATE ',
+    sectionTitleHighlight: 'CONTACT',
+    sectionDescription:
+      'Have a project or technical challenge? Describe your mission and I will reach out to discuss the operation.',
+    clientName: 'Name / Codename',
+    clientNamePlaceholder: 'Your name or operational identifier',
+    projectIdea: 'Mission Description',
+    projectIdeaPlaceholder: 'Describe the project, scope and objectives...',
+    estimatedBudget: 'Estimated Budget',
+    budgetOptions: {
+      small: 'Up to $2k',
+      medium: '$2k — $10k',
+      large: '$10k — $30k',
+      enterprise: '$30k+',
+      undisclosed: 'Prefer not to say',
+    },
+    techPreference: 'Preferred Stack / Technologies',
+    techPreferencePlaceholder: 'e.g. Vue 3, Nuxt, Go, Microservices...',
+    submit: 'Transmit Data',
+    submitting: 'Transmitting...',
+    successTitle: 'Transmission Received',
+    successMessage:
+      'Your mission has been queued for triage. I will analyze the requirements and respond shortly via secure channel.',
+    errorTitle: 'Transmission Failed',
+    errorMessage:
+      'Unable to complete transmission. Check your connection and try again.',
+    requiredField: 'Required field',
+    ctaTitle: 'Have a project in mind?',
+    ctaSubtitle: 'Describe your idea and let\'s build something amazing together.',
+    ctaButton: 'Submit Idea',
   },
   caseStudy: {
     backToPortfolio: 'Back to Portfolio',

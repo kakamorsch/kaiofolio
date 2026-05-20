@@ -6,6 +6,8 @@
     <SkillsSection />
     <HobbiesSection />
     <NextMissionSection />
+    <LeadCtaSection />
+    <ProjectDiscoveryForm />
     <FooterSection />
   </div>
 </template>
