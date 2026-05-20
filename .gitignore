@@ -32,3 +32,4 @@ CONTEXT.md
 test-results/
 .env*.local
 *.pdf
+test-tailwind.css
