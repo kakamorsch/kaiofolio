@@ -1,7 +1,7 @@
 # Kaiofolio — Engineering Portfolio
 
 > **A gamified, high-conversion portfolio engineered for Senior Software Engineer positioning.**  
-> Deployed at: [kakamorsch.github.io](https://kakamorsch.github.io)
+> Deployed at: [kakamorsch.com.br](https://kakamorsch.com.br)
 
 ---
 
