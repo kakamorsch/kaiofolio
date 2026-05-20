@@ -231,7 +231,7 @@ export default {
           'Contributed to automated tests ensuring code quality',
         ],
         technologies: ['JavaScript', 'React', 'VTEX', 'Performance Optimization'],
-        level: 5,
+        level: 6,
         hackCommand: 'npm run exploit --platform=vtex --target=animale',
         hackOutput: [
           '> Detecting VTEX e-commerce platform...',
@@ -257,7 +257,7 @@ export default {
           'Participated in testing and debugging across browsers',
         ],
         technologies: ['JavaScript', 'jQuery', 'Node.js', 'React', 'Sass', 'TypeScript', 'VTEX'],
-        level: 3,
+        level: 5,
         hackCommand: 'node exploit.js --target=acct --level=junior',
         hackOutput: [
           '> Junior developer access granted...',
@@ -282,7 +282,7 @@ export default {
           'Backend: Python, Django, NodeJS, MirageJS',
         ],
         technologies: ['jQuery', 'Vue.js', 'Vuex', 'Python', 'Django', 'NodeJS'],
-        level: 2,
+        level: 4,
         hackCommand: 'python3 breach.py --target=fabrica-digital --dual-role',
         hackOutput: [
           '> Dual-role access detected: Support + Development...',
@@ -305,7 +305,7 @@ export default {
           'Optimized productivity of the frontline support team',
         ],
         technologies: ['Shell Script', 'Telnet', 'SSH', 'POS Systems'],
-        level: 1,
+        level: 3,
         hackCommand: 'ssh linx-pos --script=automation.sh',
         hackOutput: [
           '> Connecting to P2K POS terminals...',
@@ -329,7 +329,7 @@ export default {
           'Network infrastructure design and maintenance',
         ],
         technologies: ['Network Infrastructure', 'Hardware Maintenance', 'IT Support'],
-        level: 0,
+        level: 2,
         hackCommand: 'init --target=promotional-travel --role=support',
         hackOutput: [
           '> Initializing first tech role...',
@@ -352,7 +352,7 @@ export default {
           'On-site problem resolution when necessary',
         ],
         technologies: ['IT Support', 'Hardware', 'Diagnostics'],
-        level: 0,
+        level: 1,
         hackCommand: 'connect --target=altech --level=intern',
         hackOutput: [
           '> Intern access granted...',

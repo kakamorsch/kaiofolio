@@ -231,7 +231,7 @@ export default {
           'Contribui para testes automatizados garantindo qualidade de código',
         ],
         technologies: ['JavaScript', 'React', 'VTEX', 'Performance Optimization'],
-        level: 5,
+        level: 6,
         hackCommand: 'npm run exploit --platform=vtex --target=animale',
         hackOutput: [
           '> Detectando plataforma de e-commerce VTEX...',
@@ -257,7 +257,7 @@ export default {
           'Participei de testes e debugging cross-browser',
         ],
         technologies: ['JavaScript', 'jQuery', 'Node.js', 'React', 'Sass', 'TypeScript', 'VTEX'],
-        level: 3,
+        level: 5,
         hackCommand: 'node exploit.js --target=acct --level=junior',
         hackOutput: [
           '> Acesso de desenvolvedor junior concedido...',
@@ -282,7 +282,7 @@ export default {
           'Backend: Python, Django, NodeJS, MirageJS',
         ],
         technologies: ['jQuery', 'Vue.js', 'Vuex', 'Python', 'Django', 'NodeJS'],
-        level: 2,
+        level: 4,
         hackCommand: 'python3 breach.py --target=fabrica-digital --dual-role',
         hackOutput: [
           '> Acesso dual-role detectado: Suporte + Desenvolvimento...',
@@ -305,7 +305,7 @@ export default {
           'Otimizei a produtividade da equipe de suporte de primeira linha',
         ],
         technologies: ['Shell Script', 'Telnet', 'SSH', 'POS Systems'],
-        level: 1,
+        level: 3,
         hackCommand: 'ssh linx-pos --script=automation.sh',
         hackOutput: [
           '> Conectando aos terminais P2K POS...',
@@ -329,7 +329,7 @@ export default {
           'Projeto e manutenção de infraestrutura de rede',
         ],
         technologies: ['Network Infrastructure', 'Hardware Maintenance', 'IT Support'],
-        level: 0,
+        level: 2,
         hackCommand: 'init --target=promotional-travel --role=support',
         hackOutput: [
           '> Inicializando primeiro papel tech...',
@@ -352,7 +352,7 @@ export default {
           'Resolução de problemas presencial quando necessário',
         ],
         technologies: ['IT Support', 'Hardware', 'Diagnostics'],
-        level: 0,
+        level: 1,
         hackCommand: 'connect --target=altech --level=intern',
         hackOutput: [
           '> Acesso de estagiário concedido...',

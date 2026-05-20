@@ -231,7 +231,7 @@ export default {
           'コード品質を保証する自動テストに貢献。',
         ],
         technologies: ['JavaScript', 'React', 'VTEX', 'Performance Optimization'],
-        level: 5,
+        level: 6,
         hackCommand: 'npm run exploit --platform=vtex --target=animale',
         hackOutput: [
           '> VTEX Eコマースプラットフォームを検出中...',
@@ -257,7 +257,7 @@ export default {
           'クロスブラウザのテストおよびデバッグに参加。',
         ],
         technologies: ['JavaScript', 'jQuery', 'Node.js', 'React', 'Sass', 'TypeScript', 'VTEX'],
-        level: 3,
+        level: 5,
         hackCommand: 'node exploit.js --target=acct --level=junior',
         hackOutput: [
           '> ジュニア開発者アクセスを許可...',
@@ -282,7 +282,7 @@ export default {
           'バックエンド: Python、Django、NodeJS、MirageJS。',
         ],
         technologies: ['jQuery', 'Vue.js', 'Vuex', 'Python', 'Django', 'NodeJS'],
-        level: 2,
+        level: 4,
         hackCommand: 'python3 breach.py --target=fabrica-digital --dual-role',
         hackOutput: [
           '> デュアルロールアクセスを検出: サポート + 開発...',
@@ -305,7 +305,7 @@ export default {
           '第一線サポートチームの生産性を最適化。',
         ],
         technologies: ['Shell Script', 'Telnet', 'SSH', 'POS Systems'],
-        level: 1,
+        level: 3,
         hackCommand: 'ssh linx-pos --script=automation.sh',
         hackOutput: [
           '> P2K POS端末に接続中...',
@@ -329,7 +329,7 @@ export default {
           'ネットワークインフラの設計および保守。',
         ],
         technologies: ['Network Infrastructure', 'Hardware Maintenance', 'IT Support'],
-        level: 0,
+        level: 2,
         hackCommand: 'init --target=promotional-travel --role=support',
         hackOutput: [
           '> 最初のテックロールを初期化中...',
@@ -352,7 +352,7 @@ export default {
           '必要に応じて対面での問題解決。',
         ],
         technologies: ['IT Support', 'Hardware', 'Diagnostics'],
-        level: 0,
+        level: 1,
         hackCommand: 'connect --target=altech --level=intern',
         hackOutput: [
           '> インターンアクセスを許可...',
