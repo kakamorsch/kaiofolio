@@ -138,4 +138,30 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
     await expect(page.locator('[data-testid="experience-card-dot-digital"]')).toBeVisible()
     await expect(page.locator('[data-testid="experience-card-altech"]')).toBeVisible()
   })
+
+  test('deve exibir meta tags OG e Twitter corretamente', async ({ page }) => {
+    await page.goto('/')
+    await page.waitForLoadState('networkidle')
+
+    const ogImage = page.locator('meta[property="og:image"]')
+    await expect(ogImage).toHaveAttribute('content', '/og-image.jpg')
+
+    const twitterImage = page.locator('meta[name="twitter:image"]')
+    await expect(twitterImage).toHaveAttribute('content', '/og-image.jpg')
+
+    const twitterCard = page.locator('meta[name="twitter:card"]')
+    await expect(twitterCard).toHaveAttribute('content', 'summary_large_image')
+
+    const ogType = page.locator('meta[property="og:type"]')
+    await expect(ogType).toHaveAttribute('content', 'website')
+  })
+
+  test('deve exibir badge de consultoria na experiência Kaze', async ({ page }) => {
+    await page.goto('/')
+    await page.waitForLoadState('networkidle')
+
+    const kazeCard = page.locator('[data-testid="experience-card-kaze"]')
+    await expect(kazeCard).toBeVisible()
+    await expect(kazeCard.locator('[data-testid="employment-type-badge"]')).toBeVisible()
+  })
 })
