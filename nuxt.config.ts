@@ -29,6 +29,10 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Kaio Morsch' },
         { name: 'theme-color', content: '#00f0ff' },
         { property: 'og:site_name', content: 'Kaio Morsch Portfolio' },
+        { property: 'og:image', content: '/og-image.jpg' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:image', content: '/og-image.jpg' },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

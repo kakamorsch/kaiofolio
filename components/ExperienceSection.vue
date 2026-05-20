@@ -63,7 +63,7 @@
             >
               <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div class="space-y-2">
-                  <div class="flex items-center gap-3">
+                  <div class="flex items-center gap-3 flex-wrap">
                     <h3 class="font-orbitron text-xl md:text-2xl font-bold uppercase text-cyber-fg group-hover:text-cyber-accent transition-colors">
                       {{ exp.company }}
                     </h3>
@@ -72,6 +72,13 @@
                       class="px-2 py-0.5 text-[10px] font-tech uppercase tracking-wider bg-cyber-accent/20 text-cyber-accent border border-cyber-accent/50"
                     >
                       {{ $t('experience.current') }}
+                    </span>
+                    <span
+                      v-if="exp.employmentType"
+                      data-testid="employment-type-badge"
+                      class="px-2 py-0.5 text-[10px] font-tech uppercase tracking-wider bg-cyber-accent-secondary/10 text-cyber-accent-secondary border border-dashed border-cyber-accent-secondary/50"
+                    >
+                      {{ exp.employmentType }}
                     </span>
                   </div>
                   <p class="font-tech text-cyber-accent-tertiary uppercase tracking-wider text-sm">
@@ -168,6 +175,32 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Featured Case Study -->
+        <div class="relative bg-cyber-card border border-dashed border-cyber-accent-secondary/40 cyber-chamfer p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div class="text-xs font-tech text-cyber-accent-secondary uppercase tracking-widest mb-2">
+                {{ $t('experience.featuredCaseStudy') }}
+              </div>
+              <h3 class="font-orbitron text-lg md:text-xl font-bold uppercase text-cyber-fg">
+                {{ $t('caseStudy.largeScaleMigration.title') }}
+              </h3>
+              <p class="text-cyber-mutedFg text-sm mt-1 max-w-xl">
+                {{ $t('caseStudy.largeScaleMigration.subtitle') }}
+              </p>
+            </div>
+            <NuxtLink
+              to="/case-studies/vue-large-scale-migration"
+              class="inline-flex items-center gap-2 px-5 py-2.5 border border-cyber-accent-secondary text-cyber-accent-secondary font-tech uppercase tracking-widest text-xs cyber-chamfer-sm hover:bg-cyber-accent-secondary hover:text-cyber-bg transition-all duration-300 shrink-0"
+            >
+              {{ $t('experience.viewCaseStudy') }}
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </NuxtLink>
           </div>
         </div>
 

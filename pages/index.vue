@@ -34,8 +34,10 @@ useSeoMeta({
   ogDescription: t('footer.brandDescription'),
   ogType: 'website',
   ogSiteName: 'Kaio Morsch Portfolio',
+  ogImage: '/og-image.jpg',
   twitterCard: 'summary_large_image',
   twitterTitle: 'KAIO MORSCH // SENIOR SOFTWARE ENGINEER',
   twitterDescription: t('footer.brandDescription'),
+  twitterImage: '/og-image.jpg',
 })
 </script>

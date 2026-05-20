@@ -52,7 +52,9 @@
               <h3 class="font-bold text-gray-900">{{ exp.company }}</h3>
               <span class="text-sm text-gray-600">{{ exp.period }}</span>
             </div>
-            <p class="text-sm font-medium text-gray-700">{{ exp.role }}</p>
+            <p class="text-sm font-medium text-gray-700">
+              {{ exp.employmentType ? `${exp.role} — ${exp.employmentType}` : exp.role }}
+            </p>
             <p class="text-sm text-gray-700 mt-1">{{ exp.description }}</p>
             <ul class="mt-2 list-disc list-inside text-sm text-gray-700 space-y-1">
               <li v-for="(h, i) in exp.highlights" :key="i">{{ h }}</li>
