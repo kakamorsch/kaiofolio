@@ -32,6 +32,8 @@ export default {
     filterActive: 'フィルター有効',
     noResults: 'この技術に一致する経験は見つからなかった。',
     clearFilter: 'フィルター解除',
+    featuredCaseStudy: '注目の技術ケース',
+    viewCaseStudy: 'ケーススタディを見る',
   },
   skills: {
     sectionLabel: '資格・能力',
@@ -73,6 +75,7 @@ export default {
     navExperiences: '職歴',
     navQualifications: '資格',
     navHobbies: '趣味',
+    navCaseStudies: 'ケーススタディ',
     contact: 'コンタクト',
     copyright: '© {year} Kaio Morsch. 全システム正常稼働中。',
     systemOnline: 'システムオンライン',
@@ -161,11 +164,12 @@ export default {
       {
         id: 'kaze',
         company: 'Kaze Solutions',
-        role: 'Software Engineer',
+        role: '創業者 & プリンシパルエンジニア [B2Bコンサルティング]',
         period: '2024年8月 - 現在',
+        employmentType: 'B2Bコンサルティング',
         location: 'ブラジル',
         description:
-          'ゼロからマルチテナント型フルスタックEコマースエンジンを設計・展開。突発的高トラフィック負荷下での並列操作、リレーショナルデータモデリング、データストリーム同期を処理。',
+          'B2B/B2Cクライアント向けにソフトウェアアーキテクチャとフルスタックソリューションを専門とする独立コンサルティングおよびLLC。ゼロからマルチテナント型フルスタックEコマースエンジンを設計・展開。突発的高トラフィック負荷下での並列操作、リレーショナルデータモデリング、データストリーム同期を処理。',
         highlights: [
           '厳格な200ms未満のレイテンシ制限下で、1時間あたり1,000件以上のリクエスト/オーダーを処理するスタンドアロンGo + Bunバックエンドアーキテクチャを設計。',
           'ReactおよびVueを活用し、Server-Side Rendering（SSR）を用いたWebインターフェースを構築。LCPを60%加速し、顧客獲得率を直接的に向上。',
@@ -376,6 +380,8 @@ export default {
       'Django',
       'RESTful APIs',
       'Microservices',
+      'High Availability',
+      'Large-Scale Migrations',
       'Payment Gateways',
       'PCI-DSS',
       'E-commerce',
@@ -384,6 +390,38 @@ export default {
       'CI/CD',
       'Shell Script',
       'Distributed Systems',
+    ],
+    skillCategories: [
+      {
+        name: 'バックエンド & ランタイム',
+        description: '高性能ランタイムとバックエンドアーキテクチャ',
+        items: ['Go', 'Golang', 'Bun', 'Node.js', 'Python', 'Django'],
+      },
+      {
+        name: 'アーキテクチャ & システム',
+        description: '分散システム、高可用性、および大規模移行',
+        items: ['Distributed Systems', 'Microservices', 'RESTful APIs', 'High Availability', 'Large-Scale Migrations'],
+      },
+      {
+        name: 'フロントエンド & フレームワーク',
+        description: 'モダンUIアーキテクチャとリアクティブフレームワーク',
+        items: ['Vue.js', 'Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'JavaScript'],
+      },
+      {
+        name: 'DevOps & クラウド',
+        description: 'CI/CD、インフラ自動化、およびクラウドパイプライン',
+        items: ['Azure DevOps', 'CI/CD', 'Shell Script'],
+      },
+      {
+        name: 'AI & 新興技術',
+        description: 'Generative AIと開発者生産性ツール',
+        items: ['Generative AI', 'AI-Assisted Development', 'Prompt Engineering for Developers'],
+      },
+      {
+        name: 'ドメイン専門知識',
+        description: '金融システム、コンプライアンス、およびEコマースプラットフォーム',
+        items: ['Payment Gateways', 'PCI-DSS', 'E-commerce', 'VTEX'],
+      },
     ],
     certifications: [
       { name: 'jQuery: 市場で最も人気のあるライブラリをマスターする Part 1', issuer: 'Alura' },
@@ -477,5 +515,54 @@ export default {
           'ユーザーの行動に注意深く観察することで、計画されたバックログでは決して捉えられないビジネスチャンスが生まれる。プロダクトへの近さと迅速な意思決定が、官僚的なプロセスを上回る。',
       },
     ],
+  },
+  caseStudy: {
+    backToPortfolio: 'ポートフォリオに戻る',
+    ctaLabel: '他の技術的ケースを見たいですか？',
+    largeScaleMigration: {
+      metaDescription: '数千人の同時利用者を抱える高トラフィックB2CプラットフォームにおけるVue 2.7からVue 3への大規模移行の詳細な技術ケーススタディ。',
+      badge: '技術ケーススタディ',
+      readTime: '読了時間: 5分',
+      title: '大規模移行: Vue 2.7 → Vue 3',
+      subtitle: '大規模B2Cプラットフォームの重要なリファクタリングを主導し、数千のコンポーネントをVue 2.7からVue 3へダウンタイムゼロで移行し、測定可能なパフォーマンス向上を実現した方法。',
+      tags: ['Vue 2.7', 'Vue 3', 'TypeScript', 'Vite', 'Micro-frontends', 'Large-Scale Migration'],
+      businessChallenge: {
+        label: 'ビジネス課題',
+        title: 'スケールを制限するレガシー',
+        content: 'ピーク時に数千の同時セッションを処理する大規模B2Cプラットフォームは、Options APIを使用したVue 2.7上に構築されていました。バンドルサイズは肥大化し、開発者体験（DX）は劣化し、ネイティブTypeScriptの欠如により本番環境で頻繁にリグレッションが発生していました。チームは重大な技術的負債を導入せずに新機能をスケールすることができませんでした。'
+      },
+      architectureStrategy: {
+        label: 'アーキテクチャ戦略',
+        title: '互換レイヤーを用いた段階的移行',
+        content: 'リスクの高いビッグバンではなく、互換性ベースの段階的移行を選択しました。Vue互換モードを設定し、Vue 2とVue 3のコンポーネントが同じランタイムで共存できるようにしました。重要なコンポーネントに触れる前に、テストカバレッジのベースラインを85%に設定しました。すべての新規コンポーネントにはComposition API + script setupを必須とする社内スタイルガイドを作成し、レガシーコンポーネントは専用のスプリントでリファクタリングしました。',
+      },
+      execution: {
+        label: '実行',
+        title: 'マイルストーンと成果物',
+        content: '移行を4つのフェーズに分けました: (1) Node 16から22へのアップグレードによりViteの使用を可能にし、ビルドチェーン全体をモダナイズ；互換性とツールのセットアップ（Vite、TypeScript）。(2) ベースコンポーネントとデザインシステムの移行。(3) コアページとチェックアウトフローの移行。(4) 互換モードの削除と最終最適化。各フェーズには自動化されたQAゲートと、Chromaticによる視覚的リグレッションテストが設けられました。',
+        milestone1Label: 'フェーズ1 — ツーリング',
+        milestone1Value: 'Vite + TS + Compat',
+        milestone2Label: 'フェーズ2 — デザインシステム',
+        milestone2Value: '42コンポーネント移行済',
+        milestone3Label: 'フェーズ3 — コアページ',
+        milestone3Value: 'ダウンタイムゼロデプロイ',
+      },
+      results: {
+        label: '結果',
+        title: '測定可能なインパクト',
+        content: '移行により、技術的およびビジネス的な大幅な改善がもたらされました。ビルド時間は劇的に短縮され、クライアントサイドのパフォーマンスが向上し、Vue 3 + TypeScriptの強化されたDXにより、チームは新機能を30%速くデリバリーできるようになりました。',
+        metric1Label: 'バンドルサイズ削減',
+        metric1Value: '-40%',
+        metric2Label: 'ビルド高速化',
+        metric2Value: '3x',
+        metric3Label: 'テストカバレッジ',
+        metric3Value: '95%',
+      },
+      lessons: {
+        label: '教訓',
+        title: 'アーキテクチャの教訓',
+        content: '大規模なフレームワーク移行は、単なる技術的問題ではなく、変更管理の問題です。移行期間中の互換性維持の決定は、本番環境の停止を防ぐために極めて重要でした。移行前の自動テストへの投資は指数関数的なリターンをもたらしました。最後に、開始時からComposition APIを厳格に採用したことで、2つのパラダイム間の不安定なハイブリッドを作り出すことを防ぎました。',
+      },
+    },
   },
 }

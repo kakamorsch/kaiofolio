@@ -32,6 +32,8 @@ export default {
     filterActive: 'Filtro ativo',
     noResults: 'Nenhuma experiência encontrada com esta tecnologia.',
     clearFilter: 'Limpar filtro',
+    featuredCaseStudy: 'Case Técnico em Destaque',
+    viewCaseStudy: 'Ver Case Study',
   },
   skills: {
     sectionLabel: 'Capacitações',
@@ -73,6 +75,7 @@ export default {
     navExperiences: 'Experiências',
     navQualifications: 'Capacitações',
     navHobbies: 'Hobbies',
+    navCaseStudies: 'Cases Técnicos',
     contact: 'Contato',
     copyright: '© {year} Kaio Morsch. Todos os sistemas operacionais.',
     systemOnline: 'Sistema Online',
@@ -161,11 +164,12 @@ export default {
       {
         id: 'kaze',
         company: 'Kaze Solutions',
-        role: 'Software Engineer',
+        role: 'Fundador & Principal Engineer [Consultoria B2B]',
         period: 'Agosto 2024 - Presente',
+        employmentType: 'Consultoria B2B',
         location: 'Brasil',
         description:
-          'Arquitetei e desenvolvi do zero um ecossistema de e-commerce e gestão transacional fullstack, projetado especificamente para mitigar falhas sob cenários de alta concorrência B2C.',
+          'Consultoria independente e LLC especializada em arquitetura de software e soluções fullstack para clientes B2C/B2B. Arquitetei e desenvolvi do zero um ecossistema de e-commerce e gestão transacional fullstack, projetado especificamente para mitigar falhas sob cenários de alta concorrência B2C.',
         highlights: [
           'Desenvolvi microsserviços em Go e Bun capazes de suportar picos de tráfego intensos com latência estrita inferior a 200ms sob cargas elevadas.',
           'Projetei soluções de UI/UX resilientes com estratégias avançadas de Server-Side Rendering (SSR), reduzindo o Largest Contentful Paint (LCP) em 60% e maximizando taxas de conversão.',
@@ -376,6 +380,8 @@ export default {
       'Django',
       'RESTful APIs',
       'Microservices',
+      'High Availability',
+      'Large-Scale Migrations',
       'Payment Gateways',
       'PCI-DSS',
       'E-commerce',
@@ -384,6 +390,38 @@ export default {
       'CI/CD',
       'Shell Script',
       'Distributed Systems',
+    ],
+    skillCategories: [
+      {
+        name: 'Backend & Runtime',
+        description: 'Runtimes de alta performance e arquitetura backend',
+        items: ['Go', 'Golang', 'Bun', 'Node.js', 'Python', 'Django'],
+      },
+      {
+        name: 'Arquitetura & Sistemas',
+        description: 'Sistemas distribuídos, alta disponibilidade e migrações de larga escala',
+        items: ['Distributed Systems', 'Microservices', 'RESTful APIs', 'High Availability', 'Large-Scale Migrations'],
+      },
+      {
+        name: 'Frontend & Frameworks',
+        description: 'Arquitetura de UI moderna e frameworks reativos',
+        items: ['Vue.js', 'Vue 3', 'Nuxt.js', 'React', 'TypeScript', 'JavaScript'],
+      },
+      {
+        name: 'DevOps & Cloud',
+        description: 'CI/CD, automação de infraestrutura e pipelines cloud',
+        items: ['Azure DevOps', 'CI/CD', 'Shell Script'],
+      },
+      {
+        name: 'IA & Tecnologias Emergentes',
+        description: 'IA Generativa e ferramentas de produtividade para desenvolvedores',
+        items: ['Generative AI', 'AI-Assisted Development', 'Prompt Engineering for Developers'],
+      },
+      {
+        name: 'Expertise de Domínio',
+        description: 'Sistemas financeiros, compliance e plataformas de e-commerce',
+        items: ['Payment Gateways', 'PCI-DSS', 'E-commerce', 'VTEX'],
+      },
     ],
     certifications: [
       { name: 'jQuery: Domine a biblioteca mais popular do mercado parte 1', issuer: 'Alura' },
@@ -477,5 +515,54 @@ export default {
           'Observar comportamento do usuário com atenção gera oportunidades de negócio que nenhum backlog planejado capturaria. Proximidade com o produto e decisão rápida superam processos burocráticos.',
       },
     ],
+  },
+  caseStudy: {
+    backToPortfolio: 'Voltar ao Portfólio',
+    ctaLabel: 'Quer ver mais cases técnicos?',
+    largeScaleMigration: {
+      metaDescription: 'Case técnico detalhado sobre a migração de larga escala de Vue 2.7 para Vue 3 em uma plataforma B2C de alta concorrência com milhares de usuários simultâneos.',
+      badge: 'Case Study Técnico',
+      readTime: 'Leitura: 5 min',
+      title: 'Migração de Larga Escala: Vue 2.7 → Vue 3',
+      subtitle: 'Como liderei a refatoração crítica de uma plataforma B2C de alta escala, migrando milhares de componentes de Vue 2.7 para Vue 3 sem downtime e com ganhos mensuráveis de performance.',
+      tags: ['Vue 2.7', 'Vue 3', 'TypeScript', 'Vite', 'Micro-frontends', 'Large-Scale Migration'],
+      businessChallenge: {
+        label: 'Desafio de Negócio',
+        title: 'Legado que Limitava Escala',
+        content: 'Uma plataforma B2C de grande porte, processando milhares de sessões simultâneas em horários de pico, estava construída sobre Vue 2.7 com Options API. O bundle estava inchado, o DX (Developer Experience) estava degradado, e a falta de TypeScript nativo gerava regressões constantes em produção. A equipe não conseguia escalar novas features sem introduzir dívidas técnicas críticas.'
+      },
+      architectureStrategy: {
+        label: 'Estratégia de Arquitetura',
+        title: 'Migração Incremental com Compat Layers',
+        content: 'Em vez de um big-bang arriscado, optei por uma migração incremental baseada em compatibilidade. Configurei o modo de compatibilidade do Vue para permitir que componentes Vue 2 e Vue 3 coexistissem no mesmo runtime. Estabeleci uma baseline de cobertura de testes de 85% antes de tocar qualquer componente crítico. Criamos um styleguide interno exigindo Composition API + script setup em todos os novos componentes, enquanto refatorávamos os legados em sprints dedicadas.',
+      },
+      execution: {
+        label: 'Execução',
+        title: 'Milestones e Entregas',
+        content: 'Dividimos a migração em 4 fases: (1) Upgrade do Node 16 para o 22, possibilitando o uso do Vite e modernizando toda a cadeia de build; setup de compat e tooling (Vite, TypeScript). (2) Migração de componentes base e design system. (3) Migração de páginas core e fluxos de checkout. (4) Remoção do compat mode e otimização final. Cada fase tinha gates de QA automatizados e testes de regressão visual via Chromatic.',
+        milestone1Label: 'Fase 1 — Tooling',
+        milestone1Value: 'Vite + TS + Compat',
+        milestone2Label: 'Fase 2 — Design System',
+        milestone2Value: '42 componentes migrados',
+        milestone3Label: 'Fase 3 — Core Pages',
+        milestone3Value: '0 downtime deploys',
+      },
+      results: {
+        label: 'Resultados',
+        title: 'Impacto Mensurável',
+        content: 'A migração resultou em melhorias significativas tanto técnicas quanto de negócio. O tempo de build caiu drasticamente, a performance no cliente melhorou, e a equipe conseguiu entregar novas features 30% mais rápido devido ao DX aprimorado do Vue 3 + TypeScript.',
+        metric1Label: 'Redução no Bundle Size',
+        metric1Value: '-40%',
+        metric2Label: 'Aceleração no Build',
+        metric2Value: '3x',
+        metric3Label: 'Cobertura de Testes',
+        metric3Value: '95%',
+      },
+      lessons: {
+        label: 'Lições Aprendidas',
+        title: 'Takeaways Arquiteturais',
+        content: 'A migração de frameworks em larga escala não é apenas um problema técnico — é um problema de gestão de mudança. A decisão de manter compatibilidade durante a transição foi crucial para evitar paradas de produção. Investir em testes automatizados antes da migração pagou dividendos exponenciais. Por fim, a adoção rigorosa de Composition API desde o início evitou que criássemos um híbrido instável entre dois paradigmas.',
+      },
+    },
   },
 }
