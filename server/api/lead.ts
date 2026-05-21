@@ -6,6 +6,7 @@ interface LeadPayload {
   project_idea?: string
   estimated_budget?: string
   tech_preference?: string
+  fax_number?: string
 }
 
 interface LeadResponse {
@@ -19,6 +20,13 @@ export default defineEventHandler(async (event): Promise<LeadResponse> => {
   const portfolioToken = (config.n8nPortfolioToken || process.env.N8N_PORTFOLIO_TOKEN) as string | undefined
 
   const body = await readBody<LeadPayload>(event)
+
+  if (body?.fax_number && typeof body.fax_number === 'string' && body.fax_number.trim().length > 0) {
+    return {
+      success: true,
+      message: 'Lead transmitted successfully',
+    }
+  }
 
   if (!body?.client_name || typeof body.client_name !== 'string' || body.client_name.trim().length === 0) {
     throw createError({

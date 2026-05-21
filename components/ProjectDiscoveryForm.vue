@@ -142,6 +142,16 @@
 
 				<!-- Form -->
 				<form v-else class="space-y-6" @submit.prevent="handleSubmit" novalidate>
+					<input
+						id="fax_number"
+						v-model="form.fax_number"
+						type="text"
+						tabindex="-1"
+						aria-hidden="true"
+						autocomplete="off"
+						class="absolute opacity-0 pointer-events-none -z-10"
+					/>
+
 					<div class="space-y-2">
 						<label
 							for="client_name"
@@ -297,6 +307,7 @@ interface LeadForm {
 	project_idea: string
 	estimated_budget: string
 	tech_preference: string
+	fax_number: string
 }
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error'
@@ -307,6 +318,7 @@ const form = reactive<LeadForm>({
 	project_idea: '',
 	estimated_budget: '',
 	tech_preference: '',
+	fax_number: '',
 })
 
 const formState = ref<FormState>('idle')
@@ -318,6 +330,7 @@ const resetForm = () => {
 	form.project_idea = ''
 	form.estimated_budget = ''
 	form.tech_preference = ''
+	form.fax_number = ''
 	showErrors.value = false
 	formState.value = 'idle'
 }
@@ -340,6 +353,7 @@ const handleSubmit = async () => {
 				project_idea: form.project_idea.trim(),
 				estimated_budget: form.estimated_budget,
 				tech_preference: form.tech_preference,
+				fax_number: form.fax_number,
 			},
 		})
 

@@ -18,6 +18,7 @@ describe('ProjectDiscoveryForm', () => {
     expect(wrapper.find('textarea#project_idea').exists()).toBe(true)
     expect(wrapper.find('select#estimated_budget').exists()).toBe(true)
     expect(wrapper.find('input#tech_preference').exists()).toBe(true)
+    expect(wrapper.find('input#fax_number').exists()).toBe(true)
     expect(wrapper.find('[data-testid="submit-button"]').exists()).toBe(true)
   })
 
@@ -73,5 +74,6 @@ describe('ProjectDiscoveryForm', () => {
     expect(wrapper.vm.form.client_name).toBe('')
     expect(wrapper.vm.form.client_contact).toBe('')
     expect(wrapper.vm.form.project_idea).toBe('')
+    expect(wrapper.vm.form.fax_number).toBe('')
   })
 })

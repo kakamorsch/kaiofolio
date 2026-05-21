@@ -111,4 +111,25 @@ describe('POST /api/lead', () => {
       })
     )
   })
+
+  it('returns immediate success without calling upstream when fax_number is filled (honeypot)', async () => {
+    const { readBody } = await import('h3')
+    const payload = {
+      client_name: 'Bot',
+      client_contact: 'bot@spam.com',
+      project_idea: 'Spam',
+      fax_number: '12345',
+    }
+    vi.mocked(readBody).mockResolvedValue(payload)
+
+    const $fetchMock = vi.fn()
+    vi.stubGlobal('$fetch', $fetchMock)
+
+    const { default: leadHandler } = await import('~/server/api/lead')
+    const event = createEvent({ method: 'POST', url: '/api/lead' })
+    const result = await leadHandler(event)
+
+    expect(result).toEqual({ success: true, message: 'Lead transmitted successfully' })
+    expect($fetchMock).not.toHaveBeenCalled()
+  })
 })
