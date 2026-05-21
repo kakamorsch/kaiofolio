@@ -172,6 +172,34 @@
 
 					<div class="space-y-2">
 						<label
+							for="client_contact"
+							class="block text-xs font-tech text-cyber-accent uppercase tracking-widest"
+						>
+							{{ $t('leadForm.clientContact') }}
+							<span class="text-red-400" aria-hidden="true">*</span>
+						</label>
+						<input
+							id="client_contact"
+							v-model="form.client_contact"
+							type="text"
+							:placeholder="$t('leadForm.clientContactPlaceholder')"
+							required
+							class="w-full px-4 py-3 bg-cyber-bg/80 border border-cyber-border text-cyber-fg font-mono text-sm placeholder:text-cyber-mutedFg/50 focus:border-cyber-accent focus:outline-none focus:ring-1 focus:ring-cyber-accent transition-colors cyber-chamfer-sm"
+							:class="{ 'border-red-400 focus:border-red-400 focus:ring-red-400': showErrors && !form.client_contact }"
+							:aria-invalid="showErrors && !form.client_contact"
+							:aria-describedby="showErrors && !form.client_contact ? 'client_contact-error' : undefined"
+						/>
+						<p
+							v-if="showErrors && !form.client_contact"
+							id="client_contact-error"
+							class="text-xs text-red-400 font-tech"
+						>
+							{{ $t('leadForm.requiredField') }}
+						</p>
+					</div>
+
+					<div class="space-y-2">
+						<label
 							for="project_idea"
 							class="block text-xs font-tech text-cyber-accent uppercase tracking-widest"
 						>
@@ -265,6 +293,7 @@ import { reactive, ref } from 'vue'
 
 interface LeadForm {
 	client_name: string
+	client_contact: string
 	project_idea: string
 	estimated_budget: string
 	tech_preference: string
@@ -274,6 +303,7 @@ type FormState = 'idle' | 'submitting' | 'success' | 'error'
 
 const form = reactive<LeadForm>({
 	client_name: '',
+	client_contact: '',
 	project_idea: '',
 	estimated_budget: '',
 	tech_preference: '',
@@ -284,6 +314,7 @@ const showErrors = ref(false)
 
 const resetForm = () => {
 	form.client_name = ''
+	form.client_contact = ''
 	form.project_idea = ''
 	form.estimated_budget = ''
 	form.tech_preference = ''
@@ -294,7 +325,7 @@ const resetForm = () => {
 const handleSubmit = async () => {
 	showErrors.value = true
 
-	if (!form.client_name.trim() || !form.project_idea.trim()) {
+	if (!form.client_name.trim() || !form.client_contact.trim() || !form.project_idea.trim()) {
 		return
 	}
 
@@ -305,6 +336,7 @@ const handleSubmit = async () => {
 			method: 'POST',
 			body: {
 				client_name: form.client_name.trim(),
+				client_contact: form.client_contact.trim(),
 				project_idea: form.project_idea.trim(),
 				estimated_budget: form.estimated_budget,
 				tech_preference: form.tech_preference,

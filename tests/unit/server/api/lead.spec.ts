@@ -10,6 +10,11 @@ vi.mock('h3', async (importOriginal) => {
   }
 })
 
+vi.stubGlobal('useRuntimeConfig', vi.fn(() => ({
+  n8nWebhookUrl: 'https://n8n.cloud/webhook/test',
+  n8nPortfolioToken: 'test-token-123',
+})))
+
 vi.stubGlobal('$fetch', vi.fn())
 
 describe('POST /api/lead', () => {
@@ -21,7 +26,7 @@ describe('POST /api/lead', () => {
 
   it('returns 400 when client_name is missing', async () => {
     const { readBody } = await import('h3')
-    vi.mocked(readBody).mockResolvedValue({ project_idea: 'Some idea' })
+    vi.mocked(readBody).mockResolvedValue({ client_contact: '+55 21 99999-9999', project_idea: 'Some idea' })
 
     const { default: leadHandler } = await import('~/server/api/lead')
     const event = createEvent({ method: 'POST', url: '/api/lead' })
@@ -32,9 +37,22 @@ describe('POST /api/lead', () => {
     })
   })
 
+  it('returns 400 when client_contact is missing', async () => {
+    const { readBody } = await import('h3')
+    vi.mocked(readBody).mockResolvedValue({ client_name: 'John', project_idea: 'Some idea' })
+
+    const { default: leadHandler } = await import('~/server/api/lead')
+    const event = createEvent({ method: 'POST', url: '/api/lead' })
+
+    await expect(leadHandler(event)).rejects.toMatchObject({
+      statusCode: 400,
+      statusMessage: 'Missing required field: client_contact',
+    })
+  })
+
   it('returns 400 when project_idea is missing', async () => {
     const { readBody } = await import('h3')
-    vi.mocked(readBody).mockResolvedValue({ client_name: 'John' })
+    vi.mocked(readBody).mockResolvedValue({ client_name: 'John', client_contact: 'john@example.com' })
 
     const { default: leadHandler } = await import('~/server/api/lead')
     const event = createEvent({ method: 'POST', url: '/api/lead' })
@@ -47,7 +65,7 @@ describe('POST /api/lead', () => {
 
   it('returns 400 when client_name is empty string', async () => {
     const { readBody } = await import('h3')
-    vi.mocked(readBody).mockResolvedValue({ client_name: '   ', project_idea: 'Idea' })
+    vi.mocked(readBody).mockResolvedValue({ client_name: '   ', client_contact: 'john@example.com', project_idea: 'Idea' })
 
     const { default: leadHandler } = await import('~/server/api/lead')
     const event = createEvent({ method: 'POST', url: '/api/lead' })
@@ -62,6 +80,7 @@ describe('POST /api/lead', () => {
     const { readBody } = await import('h3')
     const payload = {
       client_name: 'Alice',
+      client_contact: 'alice@example.com',
       project_idea: 'Build a platform',
       estimated_budget: 'large',
       tech_preference: 'Vue 3',
@@ -86,6 +105,7 @@ describe('POST /api/lead', () => {
         }),
         body: expect.objectContaining({
           client_name: 'Alice',
+          client_contact: 'alice@example.com',
           project_idea: 'Build a platform',
         }),
       })

@@ -14,6 +14,7 @@ describe('ProjectDiscoveryForm', () => {
 
     expect(wrapper.find('form').exists()).toBe(true)
     expect(wrapper.find('input#client_name').exists()).toBe(true)
+    expect(wrapper.find('input#client_contact').exists()).toBe(true)
     expect(wrapper.find('textarea#project_idea').exists()).toBe(true)
     expect(wrapper.find('select#estimated_budget').exists()).toBe(true)
     expect(wrapper.find('input#tech_preference').exists()).toBe(true)
@@ -27,7 +28,7 @@ describe('ProjectDiscoveryForm', () => {
     await wrapper.vm.$nextTick()
 
     const errors = wrapper.findAll('.text-red-400')
-    expect(errors.length).toBeGreaterThanOrEqual(2)
+    expect(errors.length).toBeGreaterThanOrEqual(3)
   })
 
   it('has submit button enabled in idle state', async () => {
@@ -70,6 +71,7 @@ describe('ProjectDiscoveryForm', () => {
 
     expect(wrapper.vm.formState).toBe('idle')
     expect(wrapper.vm.form.client_name).toBe('')
+    expect(wrapper.vm.form.client_contact).toBe('')
     expect(wrapper.vm.form.project_idea).toBe('')
   })
 })

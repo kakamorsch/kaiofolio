@@ -2,6 +2,7 @@ import { defineEventHandler, readBody, createError } from 'h3'
 
 interface LeadPayload {
   client_name?: string
+  client_contact?: string
   project_idea?: string
   estimated_budget?: string
   tech_preference?: string
@@ -23,6 +24,13 @@ export default defineEventHandler(async (event): Promise<LeadResponse> => {
     throw createError({
       statusCode: 400,
       statusMessage: 'Missing required field: client_name',
+    })
+  }
+
+  if (!body?.client_contact || typeof body.client_contact !== 'string' || body.client_contact.trim().length === 0) {
+    throw createError({
+      statusCode: 400,
+      statusMessage: 'Missing required field: client_contact',
     })
   }
 
@@ -49,6 +57,7 @@ export default defineEventHandler(async (event): Promise<LeadResponse> => {
 
   const payload = {
     client_name: body.client_name.trim(),
+    client_contact: body.client_contact.trim(),
     project_idea: body.project_idea.trim(),
     estimated_budget: body.estimated_budget?.trim() || null,
     tech_preference: body.tech_preference?.trim() || null,

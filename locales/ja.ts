@@ -525,6 +525,8 @@ export default {
       'プロジェクトや技術的な課題がありますか？ミッションを記述してください。確認の上、連絡いたします。',
     clientName: '名前 / コードネーム',
     clientNamePlaceholder: 'お名前または識別子を入力',
+    clientContact: 'メールまたはWhatsApp',
+    clientContactPlaceholder: "your{'@'}email.com または +81 90-1234-5678",
     projectIdea: 'ミッション概要',
     projectIdeaPlaceholder: 'プロジェクト、スコープ、目標を記述...',
     estimatedBudget: '予算目安',

@@ -525,6 +525,8 @@ export default {
       'Have a project or technical challenge? Describe your mission and I will reach out to discuss the operation.',
     clientName: 'Name / Codename',
     clientNamePlaceholder: 'Your name or operational identifier',
+    clientContact: 'Email or WhatsApp',
+    clientContactPlaceholder: "your{'@'}email.com or +1 555-0199",
     projectIdea: 'Mission Description',
     projectIdeaPlaceholder: 'Describe the project, scope and objectives...',
     estimatedBudget: 'Estimated Budget',

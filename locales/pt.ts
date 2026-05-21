@@ -525,6 +525,8 @@ export default {
       'Tem um projeto ou desafio técnico? Descreva sua missão e entrarei em contato para debatermos a operação.',
     clientName: 'Nome / Codinome',
     clientNamePlaceholder: 'Seu nome ou identificador operacional',
+    clientContact: 'Email ou WhatsApp',
+    clientContactPlaceholder: "seu{'@'}email.com ou +55 21 99999-9999",
     projectIdea: 'Descrição da Missão',
     projectIdeaPlaceholder: 'Descreva o projeto, escopo e objetivos...',
     estimatedBudget: 'Orçamento Estimado',
