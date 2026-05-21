@@ -1,5 +1,6 @@
 <template>
 	<section
+		id="hero"
 		class="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden"
 		:aria-label="$t('a11y.sectionProfile')"
 	>
