@@ -1,17 +1,20 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import ProjectDiscoveryForm from '~/components/ProjectDiscoveryForm.vue'
+import ProjectDiscoveryModal from '~/components/ProjectDiscoveryModal.vue'
 
 vi.stubGlobal('$fetch', vi.fn())
 
-describe('ProjectDiscoveryForm', () => {
+describe('ProjectDiscoveryModal', () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })
 
-  it('renders the form in idle state by default', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+  it('renders the dialog when isOpen is true', async () => {
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
 
+    expect(wrapper.find('[role="dialog"]').exists()).toBe(true)
     expect(wrapper.find('form').exists()).toBe(true)
     expect(wrapper.find('input#client_name').exists()).toBe(true)
     expect(wrapper.find('input#client_contact').exists()).toBe(true)
@@ -22,8 +25,18 @@ describe('ProjectDiscoveryForm', () => {
     expect(wrapper.find('[data-testid="submit-button"]').exists()).toBe(true)
   })
 
+  it('does not render dialog when isOpen is false', async () => {
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: false },
+    })
+
+    expect(wrapper.find('[role="dialog"]').exists()).toBe(false)
+  })
+
   it('shows required field errors when submitting empty form', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
 
     await wrapper.find('form').trigger('submit.prevent')
     await wrapper.vm.$nextTick()
@@ -33,13 +46,17 @@ describe('ProjectDiscoveryForm', () => {
   })
 
   it('has submit button enabled in idle state', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
     const btn = wrapper.find('[data-testid="submit-button"]')
     expect(btn.attributes('disabled')).toBeUndefined()
   })
 
   it('displays success state after successful submission', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
 
     wrapper.vm.formState = 'success'
     await wrapper.vm.$nextTick()
@@ -49,7 +66,9 @@ describe('ProjectDiscoveryForm', () => {
   })
 
   it('displays error state after failed submission', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
 
     wrapper.vm.formState = 'error'
     await wrapper.vm.$nextTick()
@@ -59,12 +78,14 @@ describe('ProjectDiscoveryForm', () => {
   })
 
   it('resets form to idle when clicking reset from success state', async () => {
-    const wrapper = await mountSuspended(ProjectDiscoveryForm)
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
 
     wrapper.vm.formState = 'success'
     await wrapper.vm.$nextTick()
 
-    const resetBtn = wrapper.find('button[type="button"]')
+    const resetBtn = wrapper.find('[data-testid="reset-button"]')
     expect(resetBtn.exists()).toBe(true)
 
     await resetBtn.trigger('click')
@@ -75,5 +96,27 @@ describe('ProjectDiscoveryForm', () => {
     expect(wrapper.vm.form.client_contact).toBe('')
     expect(wrapper.vm.form.project_idea).toBe('')
     expect(wrapper.vm.form.fax_number).toBe('')
+  })
+
+  it('emits close when Escape key is pressed', async () => {
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
+
+    const event = new KeyboardEvent('keydown', { key: 'Escape' })
+    document.dispatchEvent(event)
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.emitted('close')).toBeTruthy()
+  })
+
+  it('has aria-modal and aria-labelledby attributes', async () => {
+    const wrapper = await mountSuspended(ProjectDiscoveryModal, {
+      props: { isOpen: true },
+    })
+
+    const dialog = wrapper.find('[role="dialog"]')
+    expect(dialog.attributes('aria-modal')).toBe('true')
+    expect(dialog.attributes('aria-labelledby')).toBe('modal-lead-title')
   })
 })
