@@ -11,11 +11,17 @@ describe('LeadCtaSection', () => {
     expect(wrapper.find('[data-testid="cta-button"]').exists()).toBe(true)
   })
 
-  it('has a button that triggers scroll to form', async () => {
+  it('emits openModal when CTA button is clicked', async () => {
     const wrapper = await mountSuspended(LeadCtaSection)
     const btn = wrapper.find('[data-testid="cta-button"]')
 
     expect(btn.exists()).toBe(true)
     expect(btn.attributes('type')).toBe('button')
+
+    await btn.trigger('click')
+    await wrapper.vm.$nextTick()
+
+    expect(wrapper.emitted('openModal')).toBeTruthy()
+    expect(wrapper.emitted('openModal')?.length).toBe(1)
   })
 })

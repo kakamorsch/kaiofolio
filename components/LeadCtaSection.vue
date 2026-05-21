@@ -1,7 +1,6 @@
 <template>
 	<section
 		class="relative py-24 px-4 overflow-hidden"
-		:aria-label="$t('a11y.sectionLeadForm')"
 	>
 		<!-- Background glow -->
 		<div
@@ -41,7 +40,7 @@
 			<button
 				data-testid="cta-button"
 				type="button"
-				@click="scrollToForm"
+				@click="emit('openModal')"
 				class="group relative inline-flex items-center gap-3 px-10 py-4 bg-cyber-accent text-cyber-bg font-tech uppercase tracking-widest text-sm cyber-chamfer-sm hover:brightness-110 transition-all duration-150 cyber-glow focus:outline-none focus:ring-2 focus:ring-cyber-accent focus:ring-offset-2 focus:ring-offset-cyber-bg"
 			>
 				<span class="relative z-10">{{ $t('leadForm.ctaButton') }}</span>
@@ -75,13 +74,7 @@
 </template>
 
 <script setup lang="ts">
-const scrollToForm = () => {
-	if (process.client) {
-		const el = document.getElementById('contato')
-		if (el) {
-			el.scrollIntoView({ behavior: 'smooth' })
-			el.focus()
-		}
-	}
-}
+const emit = defineEmits<{
+	openModal: []
+}>()
 </script>
