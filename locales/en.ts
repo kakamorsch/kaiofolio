@@ -116,6 +116,13 @@ export default {
     sectionFooter: 'Footer',
     sectionWarStories: 'War Stories',
     sectionLeadForm: 'Contact Form',
+    navProfile: 'Profile',
+    navExperience: 'Experience',
+    navSkills: 'Skills',
+    navWarStories: 'War Stories',
+    backToTop: 'Back to top',
+    closeModal: 'Close modal',
+    modalTitle: 'New Mission',
   },
   profile: {
     name: 'KAIO MORSCH',

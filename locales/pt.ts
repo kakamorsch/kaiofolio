@@ -116,6 +116,13 @@ export default {
     sectionFooter: 'Rodapé',
     sectionWarStories: 'War Stories',
     sectionLeadForm: 'Formulário de Contato',
+    navProfile: 'Perfil',
+    navExperience: 'Experiências',
+    navSkills: 'Capacitações',
+    navWarStories: 'War Stories',
+    backToTop: 'Voltar ao topo',
+    closeModal: 'Fechar modal',
+    modalTitle: 'Nova Missão',
   },
   profile: {
     name: 'KAIO MORSCH',

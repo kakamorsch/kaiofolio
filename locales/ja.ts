@@ -116,6 +116,13 @@ export default {
     sectionFooter: 'フッター',
     sectionWarStories: 'War Stories',
     sectionLeadForm: 'お問い合わせフォーム',
+    navProfile: 'プロフィール',
+    navExperience: '職歴',
+    navSkills: 'スキル',
+    navWarStories: 'War Stories',
+    backToTop: 'トップに戻る',
+    closeModal: 'モーダルを閉じる',
+    modalTitle: '新規ミッション',
   },
   profile: {
     name: 'KAIO MORSCH',
