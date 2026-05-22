@@ -369,10 +369,10 @@ onUnmounted(() => {
 
 @keyframes typing {
 	from {
-		width: 0;
+		clip-path: inset(0 100% 0 0);
 	}
 	to {
-		width: 100%;
+		clip-path: inset(0 0 0 0);
 	}
 }
 

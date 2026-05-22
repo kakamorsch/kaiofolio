@@ -15,7 +15,7 @@ export default {
           fg: '#e0e0e0',
           card: '#12121a',
           muted: '#1c1c2e',
-          mutedFg: '#6b7280',
+          mutedFg: '#9ca3af',
           accent: '#00ff88',
           'accent-secondary': '#ff00ff',
           'accent-tertiary': '#00d4ff',
@@ -63,8 +63,8 @@ export default {
           '50%': { boxShadow: '0 0 10px #00ff88, 0 0 20px #00ff8860, 0 0 40px #00ff8830' }
         },
         typing: {
-          from: { width: '0' },
-          to: { width: '100%' }
+          from: { clipPath: 'inset(0 100% 0 0)' },
+          to: { clipPath: 'inset(0 0 0 0)' }
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },

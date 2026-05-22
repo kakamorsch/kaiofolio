@@ -32,12 +32,11 @@
       </div>
 
       <!-- Experience Grid -->
-      <div class="space-y-6" role="list" :aria-label="$t('a11y.experienceList')">
-        <div
+      <ul class="space-y-6" :aria-label="$t('a11y.experienceList')">
+        <li
           v-for="(exp, index) in filteredExperiences"
           :key="exp.id"
           class="group"
-          role="listitem"
         >
           <!-- Experience Card -->
           <div
@@ -56,7 +55,7 @@
               role="button"
               :aria-expanded="expandedExp === exp.id"
               :aria-controls="`exp-details-${exp.id}`"
-              :aria-label="`${$t('a11y.toggleExperience')}: ${exp.company} — ${exp.role}`"
+              :aria-label="`${exp.company}, ${$t('a11y.toggleExperience')}`"
               @click="toggleExp(exp.id)"
               @keydown.enter.prevent="toggleExp(exp.id)"
               @keydown.space.prevent="toggleExp(exp.id)"
@@ -176,7 +175,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </li>
 
         <!-- Featured Case Study -->
         <div class="relative bg-cyber-card border border-dashed border-cyber-accent-secondary/40 cyber-chamfer p-6 md:p-8">
@@ -214,7 +213,7 @@
             {{ $t('experience.clearFilter') }}
           </button>
         </div>
-      </div>
+      </ul>
     </div>
   </section>
 </template>
