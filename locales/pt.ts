@@ -120,9 +120,11 @@ export default {
     navExperience: 'Experiências',
     navSkills: 'Capacitações',
     navWarStories: 'War Stories',
+    navArticles: 'Artigos',
     backToTop: 'Voltar ao topo',
     closeModal: 'Fechar modal',
     modalTitle: 'Nova Missão',
+    sectionArticles: 'Artigos',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -606,6 +608,61 @@ export default {
         title: 'Takeaways Arquiteturais',
         content: 'A migração de frameworks em larga escala não é apenas um problema técnico — é um problema de gestão de mudança. A decisão de manter compatibilidade durante a transição foi crucial para evitar paradas de produção. Investir em testes automatizados antes da migração pagou dividendos exponenciais. Por fim, a adoção rigorosa de Composition API desde o início evitou que criássemos um híbrido instável entre dois paradigmas.',
       },
+    },
+  },
+  articles: {
+    sectionLabel: 'Publicações',
+    sectionTitle: 'PUBLICAÇÕES ',
+    sectionTitleHighlight: 'TÉCNICAS',
+    sectionDescription: 'Artigos e cases sobre arquitetura, legibilidade por IA e sistemas escaláveis.',
+  },
+  article: {
+    ctaLabel: 'Quer ler mais artigos?',
+    machineReadableEngineer: {
+      metaTitle: 'O Engenheiro Legível por Máquinas | Kaio Morsch',
+      metaDescription: 'Como otimizei meu portfólio para Agentes de IA e ATS usando JSON-LD, crawling permissivo e metadados semânticos.',
+      badge: 'Artigo',
+      readTime: 'Leitura: 4 min',
+      title: 'O Engenheiro Legível por Máquinas: Como Otimizei Meu Portfólio para Agentes de IA e ATS',
+      author: 'Por Kaio Vítor Morsch',
+      introParagraphs: [
+        'Por anos, construímos a web para olhos humanos. Discutimos layouts pixel-perfect, animações CSS e tamanhos de fonte ideais. Mas o cenário de recrutamento e descoberta de informações mudou. Hoje, o primeiro visitante do seu portfólio raramente é um gestor de contratação — é um Sistema de Rastreamento de Candidatos (ATS), um crawler de IA ou um agente de sourcing automatizado.',
+        'Se seu portfólio depende apenas de tags HTML padrão para transmitir sua experiência, você está jogando um jogo arriscado com algoritmos de parsing. Decidi parar de adivinhar e começar a me comunicar explicitamente com as máquinas. Aqui está como otimizei meu portfólio para ser totalmente legível por máquinas.',
+      ],
+      sections: [
+        {
+          label: '01 // Injeção de Schema',
+          title: 'Pare de Adivinhar, Comece a Declarar: O Poder do JSON-LD',
+          paragraphs: [
+            'Quando um agente de IA ou um ATS mais antigo faz parsing de uma página web, confiar na estrutura do DOM é uma aposta. Aquele h3 representa um cargo ou o nome de um projeto?',
+            'Para eliminar erros de parsing e alucinações, contornei completamente o scraping HTML implementando marcação rigorosa do Schema.org usando JSON-LD via meu composable useSchemaOrgProfile. Em vez de deixar o bot fazer scraping da minha UI, eu o alimento com um objeto Person estruturado. Minha stack tecnológica vai explicitamente para o array knowsAbout, meu histórico de emprego para worksFor e minha formação acadêmica para alumniOf.',
+          ],
+        },
+        {
+          label: '02 // Política de Crawling',
+          title: 'Abrindo as Portas: Um robots.txt Permissivo',
+          paragraphs: [
+            'A acessibilidade por IA começa na porta da frente. Recentemente, houve uma tendência de desenvolvedores bloquearem crawlers de IA para economizar banda ou proteger conteúdo.',
+            'Para um portfólio profissional, isso é contraproducente. Meu robots.txt é intencionalmente permissivo (User-Agent: * sem regras de disallow). Se um agente recrutador automatizado está tentando resumir meu background para um tech lead, quero garantir que ele tenha acesso irrestrito para indexar toda minha história profissional.',
+          ],
+        },
+        {
+          label: '03 // Contexto Global',
+          title: 'Contexto Global: Metadados e i18n Nativo',
+          paragraphs: [
+            'LLMs operam globalmente, e o mercado de trabalho também. Servir a um agente de IA o contexto correto economiza instantaneamente tempo de processamento e garante precisão.',
+            'Através da configuração da minha aplicação, estruturei metadados limpos para estabelecer contexto imediato. Além disso, minha estratégia de internacionalização é construída para servir aos bots o idioma correto nativamente. Se um recrutador dos EUA usa uma ferramenta de IA para sourcing de candidatos, o bot não é forçado a traduzir dinamicamente uma página e arriscar perder jargão técnico — ele acessa a localização em inglês diretamente.',
+          ],
+        },
+        {
+          label: '04 // Síntese',
+          title: 'Construindo para a Nova Web',
+          paragraphs: [
+            'Na era da IA Generativa, nosso público-alvo não é mais apenas humanos navegando em nossos sites. Estamos desenvolvendo para agentes inteligentes que fazem crawling, resumem e avaliam nossos perfis em escala.',
+            'Ao combinar crawling permissivo, metadados semânticos e schemas JSON-LD rigorosos, garantimos que nossos dados estejam exatamente onde o bot espera que estejam. O futuro da web é legível por máquinas, e como engenheiros, nossa infraestrutura pessoal deve refletir essa realidade.',
+          ],
+        },
+      ],
     },
   },
 }

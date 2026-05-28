@@ -120,9 +120,11 @@ export default {
     navExperience: 'Experience',
     navSkills: 'Skills',
     navWarStories: 'War Stories',
+    navArticles: 'Articles',
     backToTop: 'Back to top',
     closeModal: 'Close modal',
     modalTitle: 'New Mission',
+    sectionArticles: 'Articles',
   },
   profile: {
     name: 'KAIO MORSCH',
@@ -606,6 +608,61 @@ export default {
         title: 'Architectural Takeaways',
         content: 'Large-scale framework migration is not just a technical problem — it is a change management problem. The decision to maintain compatibility during the transition was crucial to avoid production outages. Investing in automated tests before the migration paid exponential dividends. Finally, rigorous adoption of Composition API from the start prevented us from creating an unstable hybrid between two paradigms.',
       },
+    },
+  },
+  articles: {
+    sectionLabel: 'Publications',
+    sectionTitle: 'TECHNICAL ',
+    sectionTitleHighlight: 'PUBLICATIONS',
+    sectionDescription: 'Articles and case studies on architecture, AI-readability, and scalable systems.',
+  },
+  article: {
+    ctaLabel: 'Want to read more articles?',
+    machineReadableEngineer: {
+      metaTitle: 'The Machine-Readable Engineer | Kaio Morsch',
+      metaDescription: 'How I optimized my portfolio for AI Agents and ATS using JSON-LD, permissive crawling, and semantic metadata.',
+      badge: 'Article',
+      readTime: 'Read time: 4 min',
+      title: 'The Machine-Readable Engineer: How I Optimized My Portfolio for AI Agents and ATS',
+      author: 'By Kaio Vítor Morsch',
+      introParagraphs: [
+        'For years, we have built the web for human eyes. We argued over pixel-perfect layouts, CSS animations, and optimal font sizes. But the landscape of recruitment and information discovery has shifted. Today, the first visitor to your portfolio is rarely a hiring manager — it is an Applicant Tracking System (ATS), an AI crawler, or an automated sourcing agent.',
+        'If your portfolio relies solely on standard HTML tags to convey your experience, you are playing a risky game of chance with parsing algorithms. I decided to stop guessing and start explicitly communicating with the machines. Here is how I optimized my portfolio to be fully machine-readable.',
+      ],
+      sections: [
+        {
+          label: '01 // Schema Injection',
+          title: 'Stop Guessing, Start Declaring: The Power of JSON-LD',
+          paragraphs: [
+            'When an AI agent or an older ATS parses a webpage, relying on DOM structure is a gamble. Does that h3 represent a job title or a project name?',
+            'To eliminate parsing errors and hallucinations, I bypassed HTML scraping entirely by implementing strict Schema.org markup using JSON-LD via my useSchemaOrgProfile composable. Instead of letting the bot scrape my UI, I feed it a structured Person object. My tech stack goes explicitly into the knowsAbout array, my employment history into worksFor, and my educational background into alumniOf.',
+          ],
+        },
+        {
+          label: '02 // Crawling Policy',
+          title: 'Opening the Doors: A Permissive robots.txt',
+          paragraphs: [
+            'AI accessibility starts at the front door. Recently, there has been a trend of developers blocking AI crawlers to save bandwidth or protect content.',
+            'For a professional portfolio, this is counterproductive. My robots.txt is intentionally permissive (User-Agent: * with no disallow rules). If an automated recruiter agent is trying to summarize my background for a tech lead, I want to ensure it has unrestricted access to index my entire professional history.',
+          ],
+        },
+        {
+          label: '03 // Global Context',
+          title: 'Global Context: Metadata and Native i18n',
+          paragraphs: [
+            'LLMs operate globally, and so does the job market. Serving an AI agent the right context instantly saves processing time and ensures accuracy.',
+            'Through my application configuration, I structured clean metadata to establish immediate context. Furthermore, my internationalization strategy is built to serve bots the correct language natively. If a US-based recruiter uses an AI tool to source candidates, the bot is not forced to dynamically translate a page and risk losing technical jargon — it accesses the English localization directly.',
+          ],
+        },
+        {
+          label: '04 // Synthesis',
+          title: 'Building for the New Web',
+          paragraphs: [
+            'In the era of Generative AI, our target audience is no longer just humans browsing our sites. We are developing for intelligent agents that crawl, summarize, and evaluate our profiles at scale.',
+            'By combining permissive crawling, semantic metadata, and strict JSON-LD schemas, we ensure that our data is exactly where the bot expects it to be. The future of the web is machine-readable, and as engineers, our personal infrastructure should reflect that reality.',
+          ],
+        },
+      ],
     },
   },
 }

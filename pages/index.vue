@@ -6,6 +6,7 @@
     <SkillsSection />
     <HobbiesSection />
     <NextMissionSection />
+    <ArticlesSection />
     <LeadCtaSection @open-modal="isModalOpen = true" />
     <ProjectDiscoveryModal :is-open="isModalOpen" @close="isModalOpen = false" />
     <FooterSection />
