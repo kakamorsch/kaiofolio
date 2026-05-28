@@ -7,7 +7,7 @@ describe('FloatingNavigation', () => {
     const wrapper = await mountSuspended(FloatingNavigation)
 
     const links = wrapper.findAll('a')
-    expect(links.length).toBe(4)
+    expect(links.length).toBe(5)
 
     expect(links[0].attributes('aria-label')).toBeTruthy()
     expect(links[0].attributes('href')).toBe('#hero')
@@ -15,6 +15,7 @@ describe('FloatingNavigation', () => {
     expect(links[1].attributes('href')).toBe('#experiencias')
     expect(links[2].attributes('href')).toBe('#war-stories')
     expect(links[3].attributes('href')).toBe('#capacitacoes')
+    expect(links[4].attributes('href')).toBe('#artigos')
   })
 
   it('renders back-to-top button with aria-label', async () => {

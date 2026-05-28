@@ -62,6 +62,7 @@ const navItems = computed(() => [
 	{ id: 'experiencias', href: '#experiencias', label: t('a11y.navExperience') },
 	{ id: 'war-stories', href: '#war-stories', label: t('a11y.navWarStories') },
 	{ id: 'capacitacoes', href: '#capacitacoes', label: t('a11y.navSkills') },
+	{ id: 'artigos', href: '#artigos', label: t('a11y.navArticles') },
 ])
 
 let observer: IntersectionObserver | null = null
