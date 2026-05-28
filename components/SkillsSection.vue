@@ -29,11 +29,10 @@
             {{ $t('skills.skillsMatrix') }}
           </div>
 
-          <div class="space-y-6" role="list" :aria-label="$t('a11y.techArsenalList')">
-            <div
+          <ul class="space-y-6 list-none" :aria-label="$t('a11y.techArsenalList')">
+            <li
               v-for="(cat, catIndex) in localizedSkillCategories"
               :key="cat.name"
-              role="listitem"
               class="relative"
             >
               <!-- Category Header -->
@@ -69,8 +68,8 @@
                   {{ skill }}
                 </li>
               </ul>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
         <!-- Certifications Terminal -->
@@ -82,7 +81,7 @@
             <span class="ml-2 text-[10px] font-tech text-cyber-mutedFg uppercase">certifications.log</span>
           </div>
 
-          <ul class="p-6 space-y-3" role="list" :aria-label="$t('a11y.certificationsTerminal')">
+          <ul class="p-6 space-y-3" :aria-label="$t('a11y.certificationsTerminal')">
             <li
               v-for="(cert, index) in localizedCertifications"
               :key="index"
@@ -127,7 +126,7 @@
             {{ $t('skills.languages') }}
           </div>
 
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4" role="list">
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none">
             <li
               v-for="lang in localizedLanguages"
               :key="lang.name"

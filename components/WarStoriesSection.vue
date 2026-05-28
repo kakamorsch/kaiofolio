@@ -18,13 +18,12 @@
       </div>
 
       <!-- Stories Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" role="list">
-        <div
+      <ul class="grid grid-cols-1 lg:grid-cols-2 gap-8 list-none">
+        <li
           v-for="story in localizedWarStories"
           :key="story.id"
           data-testid="war-story-card"
           class="group relative bg-cyber-card border border-cyber-border cyber-chamfer p-6 md:p-8 hover:border-cyber-accent-tertiary hover:shadow-neon-tertiary transition-all duration-300"
-          role="listitem"
         >
           <!-- Corner accents -->
           <div class="absolute top-0 left-0 w-3 h-3 border-t border-l border-cyber-border group-hover:border-cyber-accent-tertiary transition-colors" aria-hidden="true" />
@@ -67,8 +66,8 @@
               <p class="text-sm text-cyber-accent/90 leading-relaxed italic">{{ story.lessons }}</p>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
 </template>
