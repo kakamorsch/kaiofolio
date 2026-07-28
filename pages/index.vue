@@ -7,18 +7,12 @@
     <HobbiesSection />
     <NextMissionSection />
     <ArticlesSection />
-    <LeadCtaSection @open-modal="isModalOpen = true" />
-    <ProjectDiscoveryModal :is-open="isModalOpen" @close="isModalOpen = false" />
     <FooterSection />
     <FloatingNavigation />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const isModalOpen = ref(false)
-
 const { t, locale } = useI18n()
 
 useSchemaOrgProfile()
