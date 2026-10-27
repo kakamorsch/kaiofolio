@@ -7,6 +7,7 @@ export function useSchemaOrgProfile() {
     localizedSubtitle,
     localizedSummary,
     localizedLocation,
+    localizedRemoteRegion,
     localizedContact,
     localizedSkills,
     localizedExperiences,
@@ -24,6 +25,7 @@ export function useSchemaOrgProfile() {
     const experiences = localizedExperiences.value
     const education = localizedEducation.value
     const location = localizedLocation.value
+    const remoteRegion = localizedRemoteRegion.value
 
     const personSchema = {
       '@context': 'https://schema.org',
@@ -36,8 +38,11 @@ export function useSchemaOrgProfile() {
       telephone: contact.phone,
       address: {
         '@type': 'PostalAddress',
-        addressLocality: location,
+        addressLocality: remoteRegion,
+        addressCountry: 'BR',
       },
+      jobLocationType: 'TELECOMMUTE',
+      availableLanguage: ['pt', 'en', 'ja'],
       sameAs: [
         `https://${contact.linkedin}`,
         `https://${contact.github}`,
@@ -49,6 +54,7 @@ export function useSchemaOrgProfile() {
         name: exp.company,
         jobTitle: exp.role,
         description: exp.description,
+        employmentType: exp.employmentType,
         startDate: exp.period.split(' - ')[0] || exp.period,
         endDate: exp.period.includes('Present') || exp.period.includes('Presente') || exp.period.includes('現在')
           ? undefined

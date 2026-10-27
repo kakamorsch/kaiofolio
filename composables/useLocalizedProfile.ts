@@ -17,15 +17,32 @@ export interface LocalizedExperience {
   location: string
   description: string
   highlights: string[]
+  note?: string
   technologies: string[]
   level: number
   hackCommand: string
   hackOutput: string[]
 }
 
-export interface LocalizedCertification {
-  name: string
-  issuer: string
+export interface LocalizedImpactHighlight {
+  metric: string
+  label: string
+}
+
+export interface LocalizedCoreSkillGroup {
+  label: string
+  items: string[]
+}
+
+export interface LocalizedResumeMeta {
+  profileTitle: string
+  coreSkillsTitle: string
+  experienceTitle: string
+  experienceContinuedTitle: string
+  educationTitle: string
+  languagesTitle: string
+  experienceOrder: string[]
+  coreSkills: LocalizedCoreSkillGroup[]
 }
 
 export interface LocalizedEducation {
@@ -93,6 +110,7 @@ export function useLocalizedProfile() {
   const localizedTitle = computed(() => t('profile.title'))
   const localizedSubtitle = computed(() => t('profile.subtitle'))
   const localizedLocation = computed(() => t('profile.location'))
+  const localizedRemoteRegion = computed(() => t('profile.remoteRegion'))
   const localizedSummary = computed(() => t('profile.summary'))
   const localizedSpecialties = computed(() => resolveArrayStrings(t, 'profile.specialties', tm('profile.specialties') as any[]))
   const localizedContact = computed<LocalizedContact>(() => ({
@@ -119,6 +137,7 @@ export function useLocalizedProfile() {
       location: t(`profile.experiences.${i}.location`),
       description: t(`profile.experiences.${i}.description`),
       highlights: resolveArrayStrings(t, `profile.experiences.${i}.highlights`, raw[i]?.highlights),
+      note: te(`profile.experiences.${i}.note`) ? t(`profile.experiences.${i}.note`) : undefined,
       technologies: resolveArrayStrings(t, `profile.experiences.${i}.technologies`, raw[i]?.technologies),
       level: Number(tm(`profile.experiences.${i}.level`)) || 0,
       hackCommand: rawMessage(tm, `profile.experiences.${i}.hackCommand`),
@@ -138,13 +157,33 @@ export function useLocalizedProfile() {
     }))
   })
 
-  const localizedCertifications = computed<LocalizedCertification[]>(() => {
-    const raw = tm('profile.certifications') as any[]
+  const localizedImpactHighlights = computed<LocalizedImpactHighlight[]>(() => {
+    const raw = tm('profile.impactHighlights') as any[]
     if (!Array.isArray(raw)) return []
     return raw.map((_, i) => ({
-      name: t(`profile.certifications.${i}.name`),
-      issuer: t(`profile.certifications.${i}.issuer`),
+      metric: t(`profile.impactHighlights.${i}.metric`),
+      label: t(`profile.impactHighlights.${i}.label`),
     }))
+  })
+
+  const localizedResumeMeta = computed<LocalizedResumeMeta>(() => {
+    const rawOrder = tm('resume.experienceOrder') as any[]
+    const rawCore = tm('resume.coreSkills') as any[]
+    return {
+      profileTitle: t('resume.profileTitle'),
+      coreSkillsTitle: t('resume.coreSkillsTitle'),
+      experienceTitle: t('resume.experienceTitle'),
+      experienceContinuedTitle: t('resume.experienceContinuedTitle'),
+      educationTitle: t('resume.educationTitle'),
+      languagesTitle: t('resume.languagesTitle'),
+      experienceOrder: resolveArrayStrings(t, 'resume.experienceOrder', rawOrder),
+      coreSkills: Array.isArray(rawCore)
+        ? rawCore.map((_, i) => ({
+            label: t(`resume.coreSkills.${i}.label`),
+            items: resolveArrayStrings(t, `resume.coreSkills.${i}.items`, rawCore[i]?.items),
+          }))
+        : [],
+    }
   })
 
   const localizedEducation = computed<LocalizedEducation>(() => ({
@@ -201,6 +240,7 @@ export function useLocalizedProfile() {
     title: localizedTitle.value,
     subtitle: localizedSubtitle.value,
     location: localizedLocation.value,
+    remoteRegion: localizedRemoteRegion.value,
     summary: localizedSummary.value,
     specialties: localizedSpecialties.value,
     contact: localizedContact.value,
@@ -211,12 +251,13 @@ export function useLocalizedProfile() {
     experiences: localizedExperiences.value,
     skills: localizedSkills.value,
     skillCategories: localizedSkillCategories.value,
-    certifications: localizedCertifications.value,
+    impactHighlights: localizedImpactHighlights.value,
     education: localizedEducation.value,
     languages: localizedLanguages.value,
     hobbies: localizedHobbies.value,
     nextMission: localizedNextMission.value,
     warStories: localizedWarStories.value,
+    resume: localizedResumeMeta.value,
   }))
 
   return {
@@ -226,6 +267,7 @@ export function useLocalizedProfile() {
     localizedTitle,
     localizedSubtitle,
     localizedLocation,
+    localizedRemoteRegion,
     localizedSummary,
     localizedSpecialties,
     localizedContact,
@@ -236,7 +278,8 @@ export function useLocalizedProfile() {
     localizedExperiences,
     localizedSkills,
     localizedSkillCategories,
-    localizedCertifications,
+    localizedImpactHighlights,
+    localizedResumeMeta,
     localizedEducation,
     localizedLanguages,
     localizedHobbies,

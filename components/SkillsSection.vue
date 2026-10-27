@@ -72,27 +72,27 @@
           </ul>
         </div>
 
-        <!-- Certifications Terminal -->
+        <!-- Impact Highlights -->
         <div class="bg-cyber-bg border border-cyber-border cyber-chamfer overflow-hidden">
           <div class="flex items-center gap-2 px-4 py-2 bg-cyber-muted/50 border-b border-cyber-border" aria-hidden="true">
             <div class="w-3 h-3 rounded-full bg-red-500/80" />
             <div class="w-3 h-3 rounded-full bg-yellow-500/80" />
             <div class="w-3 h-3 rounded-full bg-green-500/80" />
-            <span class="ml-2 text-[10px] font-tech text-cyber-mutedFg uppercase">certifications.log</span>
+            <span class="ml-2 text-[10px] font-tech text-cyber-mutedFg uppercase">impact.log</span>
           </div>
 
-          <ul class="p-6 space-y-3" :aria-label="$t('a11y.certificationsTerminal')">
+          <ul class="p-6 space-y-3" :aria-label="$t('a11y.impactHighlightsList')">
             <li
-              v-for="(cert, index) in localizedCertifications"
+              v-for="(item, index) in localizedImpactHighlights"
               :key="index"
               class="flex items-start gap-3 group"
             >
               <span class="text-cyber-accent-tertiary mt-0.5" aria-hidden="true">></span>
               <div>
-                <p class="text-sm text-cyber-fg group-hover:text-cyber-accent-tertiary transition-colors">
-                  {{ cert.name }}
+                <p class="text-sm font-tech text-cyber-accent group-hover:text-cyber-accent-tertiary transition-colors">
+                  {{ item.metric }}
                 </p>
-                <p class="text-xs text-cyber-mutedFg font-tech">{{ cert.issuer }}</p>
+                <p class="text-xs text-cyber-mutedFg mt-0.5">{{ item.label }}</p>
               </div>
             </li>
           </ul>
@@ -147,7 +147,7 @@ import { useLocalizedProfile } from '~/composables/useLocalizedProfile'
 
 const {
   localizedSkillCategories,
-  localizedCertifications,
+  localizedImpactHighlights,
   localizedEducation,
   localizedLanguages,
 } = useLocalizedProfile()

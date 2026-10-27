@@ -31,9 +31,11 @@ describe('SkillsSection', () => {
     expect(text).toContain('Large-Scale Migrations')
   })
 
-  it('renders certification terminal', async () => {
+  it('renders impact highlights terminal instead of certifications', async () => {
     const wrapper = await mountSuspended(SkillsSection)
-    expect(wrapper.text()).toContain('certifications.log')
+    expect(wrapper.text()).toContain('impact.log')
+    expect(wrapper.text()).not.toContain('certifications.log')
+    expect(wrapper.text()).not.toContain('Alura')
   })
 
   it('has sr-only semantic heading for ATS', async () => {

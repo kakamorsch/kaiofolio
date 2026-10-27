@@ -52,9 +52,12 @@ test.describe('Case Study — Large-Scale Vue Migration', () => {
     await page.waitForLoadState('networkidle')
 
     const bodyText = await page.locator('body').textContent()
+    // Milestones
     expect(bodyText).toContain('Vite + TS + Compat')
+    expect(bodyText).toContain('0 downtime deploys')
+    // Results metrics — sourced from caseStudy.largeScaleMigration.results.*
     expect(bodyText).toContain('-40%')
-    expect(bodyText).toContain('3x')
-    expect(bodyText).toContain('95%')
+    expect(bodyText).toContain('90%')
+    expect(bodyText).toContain('85%')
   })
 })

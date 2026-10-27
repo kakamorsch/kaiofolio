@@ -110,11 +110,12 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
     const experienceSection = page.locator('#experiencias')
     await expect(experienceSection.getByText(/filtro ativo.*go/i)).toBeVisible()
 
-    // Verifica cards visíveis
+    // Verifica cards visíveis — o filtro "Go" casa apenas os cargos com Go no stack.
+    await expect(page.locator('[data-testid="experience-card-dot-digital"]')).toBeVisible()
     await expect(page.locator('[data-testid="experience-card-pagarme"]')).toBeVisible()
     await expect(page.locator('[data-testid="experience-card-kaze"]')).toBeVisible()
-    await expect(page.locator('[data-testid="experience-card-fabrica"]')).toBeVisible()
     await expect(page.locator('[data-testid="experience-card-acct"]')).not.toBeVisible()
+    await expect(page.locator('[data-testid="experience-card-soma"]')).not.toBeVisible()
   })
 
   test('deve limpar filtro e restaurar todas as experiências', async ({ page }) => {
@@ -136,7 +137,10 @@ test.describe('Jornada Crítica — Portfólio Kaiofolio', () => {
 
     await expect(experienceSection.getByText('Filtro ativo:')).not.toBeVisible()
     await expect(page.locator('[data-testid="experience-card-dot-digital"]')).toBeVisible()
-    await expect(page.locator('[data-testid="experience-card-altech"]')).toBeVisible()
+    await expect(page.locator('[data-testid="experience-card-soma"]')).toBeVisible()
+    // Support/hardware roles were pruned for the US senior-market resume.
+    await expect(page.locator('[data-testid="experience-card-altech"]')).toHaveCount(0)
+    await expect(page.locator('[data-testid="experience-card-promotional"]')).toHaveCount(0)
   })
 
   test('deve exibir meta tags OG e Twitter corretamente', async ({ page }) => {
