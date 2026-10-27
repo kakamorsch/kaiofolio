@@ -40,7 +40,7 @@ export default {
     sectionTitle: 'TECH ',
     sectionTitleHighlight: 'ARSENAL',
     sectionDescription:
-      'Technical stack built over 6+ years of operations in high-availability environments.',
+      'Technical stack built over 8+ years of operations in high-availability environments.',
     skillsMatrix: 'Skills Matrix',
     academicEducation: 'Academic Education',
     languages: 'Languages',
@@ -139,10 +139,10 @@ export default {
       portfolio: 'kakamorsch.github.io',
     },
     summary:
-      'Senior Software Engineer with 6+ years of experience architecting and scaling high-throughput, mission-critical B2C e-commerce and financial transactional systems. Core expertise lies in microservice decoupling, latency mitigation, and bridging massive backend engines with highly performant, accessible frontend modern ecosystems (React, Vue, TypeScript). Proven track record of optimizing high-volume payment processing pipelines under strict security compliances, directly increasing conversion rates and operational revenue.',
+      'Senior Software Engineer with 8 years of experience architecting and scaling high-throughput, mission-critical B2C e-commerce and financial transactional systems. Core expertise lies in microservice decoupling, latency mitigation, and bridging massive backend engines with highly performant, accessible frontend modern ecosystems (React, Vue, TypeScript). Proven track record of optimizing high-volume payment processing pipelines under strict security compliances, directly increasing conversion rates and operational revenue.',
     specialties: ['Go', 'Distributed Systems', 'React', 'Vue/Nuxt', 'Bun', 'High-Traffic B2C', 'Payment Gateways'],
     level: '9 // Senior',
-    exp: '6+ Years',
+    exp: '8+ Years',
     stack: 'Go / React / Vue / Distributed Systems',
     focus: 'B2C Scale & FinTech',
     experiences: [
@@ -569,7 +569,7 @@ export default {
       badge: 'Technical Case Study',
       readTime: 'Read time: 5 min',
       title: 'Large-Scale Migration: Vue 2.7 → Vue 3',
-      subtitle: 'How I led the critical refactoring of a high-scale B2C platform, migrating thousands of components from Vue 2.7 to Vue 3 with zero downtime and measurable performance gains.',
+      subtitle: 'How I led the critical refactoring of a high-scale B2C platform, migrating 20+ screens and dozens of components from Vue 2.7 to Vue 3 with zero downtime and measurable performance gains.',
       tags: ['Vue 2.7', 'Vue 3', 'TypeScript', 'Vite', 'Micro-frontends', 'Large-Scale Migration'],
       businessChallenge: {
         label: 'Business Challenge',
@@ -598,10 +598,10 @@ export default {
         content: 'The migration resulted in significant technical and business improvements. Build time dropped drastically, client-side performance improved, and the team was able to deliver new features 30% faster due to the enhanced DX of Vue 3 + TypeScript.',
         metric1Label: 'Bundle Size Reduction',
         metric1Value: '-40%',
-        metric2Label: 'Build Speedup',
-        metric2Value: '3x',
+        metric2Label: 'Build Time Reduction',
+        metric2Value: '90%',
         metric3Label: 'Test Coverage',
-        metric3Value: '95%',
+        metric3Value: '85%',
       },
       lessons: {
         label: 'Lessons Learned',

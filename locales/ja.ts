@@ -139,10 +139,10 @@ export default {
       portfolio: 'kakamorsch.github.io',
     },
     summary:
-      '分散システムと高トラフィックB2Cプラットフォームの設計・スケーリングにおいて6年以上の実績を持つシニアソフトウェアエンジニア。マイクロサービスの分離化、レイテンシー軽減、大規模バックエンドエンジンと高パフォーマンスでアクセシブルな最新フロントエンドエコシステム（React、Vue、TypeScript）の橋渡しを専門とする。厳格なセキュリティコンプライアンス下での高ボリューム決済処理パイプラインの最適化において実績があり、コンバージョン率と運用収益の直接的な向上に貢献。',
+      '分散システムと高トラフィックB2Cプラットフォームの設計・スケーリングにおいて8年の実績を持つシニアソフトウェアエンジニア。マイクロサービスの分離化、レイテンシー軽減、大規模バックエンドエンジンと高パフォーマンスでアクセシブルな最新フロントエンドエコシステム（React、Vue、TypeScript）の橋渡しを専門とする。厳格なセキュリティコンプライアンス下での高ボリューム決済処理パイプラインの最適化において実績があり、コンバージョン率と運用収益の直接的な向上に貢献。',
     specialties: ['Go', 'Distributed Systems', 'React', 'Vue/Nuxt', 'Bun', 'High-Traffic B2C', 'Payment Gateways'],
     level: '9 // Senior',
-    exp: '6+ 年',
+    exp: '8+ 年',
     stack: 'Go / React / Vue / Distributed Systems',
     focus: 'B2Cスケール & フィンテック',
     experiences: [
@@ -598,10 +598,10 @@ export default {
         content: '移行により、技術的およびビジネス的な大幅な改善がもたらされました。ビルド時間は劇的に短縮され、クライアントサイドのパフォーマンスが向上し、Vue 3 + TypeScriptの強化されたDXにより、チームは新機能を30%速くデリバリーできるようになりました。',
         metric1Label: 'バンドルサイズ削減',
         metric1Value: '-40%',
-        metric2Label: 'ビルド高速化',
-        metric2Value: '3x',
+        metric2Label: 'ビルド時間の削減',
+        metric2Value: '90%',
         metric3Label: 'テストカバレッジ',
-        metric3Value: '95%',
+        metric3Value: '85%',
       },
       lessons: {
         label: '教訓',

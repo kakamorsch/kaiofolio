@@ -40,7 +40,7 @@ export default {
     sectionTitle: 'ARSENAL ',
     sectionTitleHighlight: 'TECNOLOGICO',
     sectionDescription:
-      'Stack técnico construído ao longo de 6+ anos de operações em ambientes de alta disponibilidade.',
+      'Stack técnico construído ao longo de 8+ anos de operações em ambientes de alta disponibilidade.',
     skillsMatrix: 'Skills Matrix',
     academicEducation: 'Formação Acadêmica',
     languages: 'Linguagens',
@@ -139,10 +139,10 @@ export default {
       portfolio: 'kakamorsch.github.io',
     },
     summary:
-      'Engenheiro de Software Sênior com mais de 6 anos de experiência na arquitetura e escala de sistemas distribuídos de alto tráfego, plataformas transacionais B2C e infraestruturas financeiras resilientes. Especialista em mitigar latência e conectar microsserviços complexos de backend com ecossistemas frontend modernos de alta performance (React e Vue), garantindo idempotência e conformidade regulatória. Histórico comprovado na otimização de gateways de pagamento críticos com impacto direto na receita e retenção de utilizadores em larga escala.',
+      'Engenheiro de Software Sênior com 8 anos de experiência na arquitetura e escala de sistemas distribuídos de alto tráfego, plataformas transacionais B2C e infraestruturas financeiras resilientes. Especialista em mitigar latência e conectar microsserviços complexos de backend com ecossistemas frontend modernos de alta performance (React e Vue), garantindo idempotência e conformidade regulatória. Histórico comprovado na otimização de gateways de pagamento críticos com impacto direto na receita e retenção de utilizadores em larga escala.',
     specialties: ['Go', 'Distributed Systems', 'React', 'Vue/Nuxt', 'Bun', 'High-Traffic B2C', 'Payment Gateways'],
     level: '9 // Senior',
-    exp: '6+ Anos',
+    exp: '8+ Anos',
     stack: 'Go / React / Vue / Distributed Systems',
     focus: 'Escala & FinTech B2C',
     experiences: [
@@ -569,7 +569,7 @@ export default {
       badge: 'Case Study Técnico',
       readTime: 'Leitura: 5 min',
       title: 'Migração de Larga Escala: Vue 2.7 → Vue 3',
-      subtitle: 'Como liderei a refatoração crítica de uma plataforma B2C de alta escala, migrando milhares de componentes de Vue 2.7 para Vue 3 sem downtime e com ganhos mensuráveis de performance.',
+      subtitle: 'Como liderei a refatoração crítica de uma plataforma B2C de alta escala, migrando mais de 20 telas e dezenas de componentes de Vue 2.7 para Vue 3 sem downtime e com ganhos mensuráveis de performance.',
       tags: ['Vue 2.7', 'Vue 3', 'TypeScript', 'Vite', 'Micro-frontends', 'Large-Scale Migration'],
       businessChallenge: {
         label: 'Desafio de Negócio',
@@ -598,10 +598,10 @@ export default {
         content: 'A migração resultou em melhorias significativas tanto técnicas quanto de negócio. O tempo de build caiu drasticamente, a performance no cliente melhorou, e a equipe conseguiu entregar novas features 30% mais rápido devido ao DX aprimorado do Vue 3 + TypeScript.',
         metric1Label: 'Redução no Bundle Size',
         metric1Value: '-40%',
-        metric2Label: 'Aceleração no Build',
-        metric2Value: '3x',
+        metric2Label: 'Redução no Tempo de Build',
+        metric2Value: '90%',
         metric3Label: 'Cobertura de Testes',
-        metric3Value: '95%',
+        metric3Value: '85%',
       },
       lessons: {
         label: 'Lições Aprendidas',
